@@ -1,0 +1,79 @@
+#carReserve {
+  margin-top: 6em;
+}
+
+#carReserve span {
+  color: #FFBE4D;
+  display: block;
+  text-transform: capitalize;
+}
+
+#carReserve h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#carReserve p {
+  width: 50%;
+  margin: 0px auto;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4em;
+}
+
+.reserve-container {
+  background-color: #010311;
+  padding: 4em;
+}
+
+.reserve-container form input, select {
+  border: 1px solid #949494;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 3em;
+}
+
+.reserve-container form select {
+  color: #FFBE4D;
+  text-transform: uppercase;
+}
+
+.reserve-container form select:focus {
+  background: none;
+}
+
+.reserve-container form input::placeholder, label {
+  color: #949494;
+}
+
+input[type="date"], input[type="time"] {
+  color: #949494;
+}
+
+.reserve-container form button {
+  background-color: #FFBE4D;
+}
+
+#carReserve-img-block span{
+  color: #FFBE4D;
+}
+
+#carReserve-img-block h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Media queries */
+
+@media (max-width: 480px) {
+  .reserve-container {
+    padding: 2em;
+  }
+
+  #carReserve p {
+    width: 80%;
+  }
+}

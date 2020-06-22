@@ -1,0 +1,47 @@
+#whatweoffer {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+#whatweoffer span {
+  color: #FFBE4D;
+  display: block;
+  text-transform: capitalize;
+}
+
+#whatweoffer h1 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#whatweoffer p {
+  width: 50%;
+  margin: 0px auto;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4em;
+}
+
+#whatweoffer .img-gallery {
+  background: url('../../../assets/images/photography-of-gray-sports-car-919073.jpg') center no-repeat;
+  background-size: cover;
+  height: 60vh;
+  z-index: -1;
+}
+
+#whatweoffer .img-gallery:hover {
+  /* opacity: .7; */
+  cursor: pointer;
+  border: 2px solid #888;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+  transform: rotate(360deg);
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.2s;
+}
+
+#whatweoffer .img-gallery h2 {
+  color: #fff !important;
+  z-index: 1;
+  position: relative;
+  top: 45%;
+}

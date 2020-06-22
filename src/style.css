@@ -1,13 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap');
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -73,7 +70,7 @@ section {
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4621,7 +4618,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand img {
-  height: 80px;
+  height: 40px;
   width: 60px;
 }
 
@@ -12253,7 +12250,7 @@ figure figcaption {
   box-shadow: 10px 10px 0 0 #eee;
 }
 
-/* .img-dotted-bg:after {
+.img-dotted-bg:after {
   position: absolute;
   content: "";
   z-index: -1;
@@ -12262,7 +12259,7 @@ figure figcaption {
   right: -50px;
   width: 200px;
   height: 400px;
-} */
+}
 
 .portfolio-section {
   background: #90a8af;
@@ -12345,7 +12342,7 @@ figure figcaption {
 }
 
 .slider-item {
-  background-image: url('assets/images/photography-of-gray-sports-car-919073.jpg');
+  background-image: url('../images/bgImage.jpeg');
 }
 
 .videoBanner {
@@ -12451,6 +12448,69 @@ margin-top: 8em;
 
 #ballImage {
   display: none;
+}
+
+
+/* .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.videoWrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+
+
+
+
+
+
+/* @media(min-aspect-ratio: 16/9) {
+  .bgVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-aspect-ratio: 16/9) {
+  .bgVideo {
+    width: auto;
+    height: 100%;
+  }
+} */
+
+@media (max-width: 950px) {
+  /* .slider-item {
+    background-image: url('../images/lOGO FA.png');
+  } */
+
+  .slider-item .slider-text h1 {
+    margin-top: 12em;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-item {
+    background-image: url('../images/lOGO FA.png');
+  }
+  .slider-item .slider-text h1 {
+    margin-top: 12em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .slider-item {
+    background-image: url('../images/lOGO FA.png');
+  }
+  .slider-item .slider-text h1 {
+    margin-top: 10em;
+  }
 }
 
 #blog-submit {

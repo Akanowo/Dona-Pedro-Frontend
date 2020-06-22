@@ -1,0 +1,64 @@
+.background-cover {
+  background: url('../../assets/images/photography-of-gray-sports-car-919073.jpg') center no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+}
+
+.background-text {
+  color: #fff !important;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.background-text h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.background-text p {
+  color: #fff !important;
+}
+
+.background-text button {
+  border: 1px solid #FFBE4D;
+  margin: 10px;
+  color: #fff;
+  padding: 1em;
+}
+
+.background-text button:nth-child(odd) {
+  background-color: #FFBE4D;
+  color: #000;
+}
+
+.background-text button:hover {
+  background: #FFBE4D;
+  color: #000;
+}
+
+
+/* Media Queries */
+@media (max-width: 310px) {
+  .background-text {
+    top: 35%;
+  }
+
+  .background-text h1 {
+    font-size: 38px;
+  }
+
+  .background-text button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 284px) {
+  .background-text {
+    top: 32%;
+  }
+}

@@ -1,0 +1,10 @@
+------Headings Font = Montserrat-bold
+  ---------
+------p font = poppins-regular
+   ---------
+ 
+-------- colors =  #010311 - dark blue
+ ------------ colors = #FFBE4D - yellow/gold
+  ------------- colors = #949494 - grey
+
+
