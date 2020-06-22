@@ -1,0 +1,61 @@
+#cars-fleet {
+  background: #010311;
+}
+
+.cars-fleet-heading span{
+  color: #FFBE4D;
+  text-transform: uppercase;
+}
+
+.cars-fleet-heading h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cars-fleet .card {
+  background-color: #010311;
+  margin-bottom: 2em;
+  border: 4px solid #030724;
+  height: fit-content;
+}
+
+#cars-fleet .card img {
+  background-color: #010311;
+  height: 60%;
+  width: 60%;
+  margin: 0px auto;
+}
+
+.car-details {
+  padding: 1em;
+}
+
+.car-details-heading h2 {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.car-details-heading p {
+  color: #fff;
+}
+
+.car-details .d-flex p {
+  color: #fff;
+}
+
+#cars-fleet .d-flex img {
+  height: 30px;
+  width: 30px;
+  margin: 8px;
+}
+
+button {
+  background-color: #FFBE4D;
+  margin-bottom: 3em;
+}
+
+#reserveButton {
+  width: 50%;
+  margin: 10px auto 0;
+}

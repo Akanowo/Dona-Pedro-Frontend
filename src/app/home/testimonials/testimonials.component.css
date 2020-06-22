@@ -1,0 +1,103 @@
+#testimonials {
+  margin-top: 6em;
+}
+
+#testimonials span {
+  color: #FFBE4D;
+  display: block;
+  text-transform: capitalize;
+}
+
+#testimonials h1, h2, h3, h4 {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#testimonials p {
+  width: 50%;
+  margin: 0px auto;
+  margin-bottom: 4em;
+}
+
+@media (max-width:991.98px) {
+  .padding {
+      padding: 1.5rem
+  }
+}
+
+@media (max-width:767.98px) {
+  .padding {
+      padding: 1rem
+  }
+}
+
+.padding {
+  padding: 5rem
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #d2d2dc;
+  border-radius: 11px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+}
+
+.card .card-body {
+  padding: 1rem 1rem
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem
+}
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: .5rem;
+  line-height: 1.5rem;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h4 {
+  line-height: .2 !important
+}
+
+.profile {
+  margin-top: 16px;
+  margin-left: 11px
+}
+
+.profile p {
+  color: #FFBE4D;
+}
+
+.profile-pic {
+  width: 58px
+}
+
+.cust-name {
+  font-size: 18px
+}
+
+.cust-profession {
+  font-size: 13px
+}
+
+.items {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 50px
+}
+
+.slick-slide {
+  margin: 10px
+}

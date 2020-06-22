@@ -1,0 +1,24 @@
+#about {
+  margin-top: 10em;
+}
+
+#about img {
+  height: 100%;
+}
+
+#about-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+#about-content {
+  position: relative;
+  top: calc(20% - 2em);
+  margin: 2em;
+}
+
+@media (max-width: 365px) {
+  #about-content {
+    margin: 10px;
+  }
+}

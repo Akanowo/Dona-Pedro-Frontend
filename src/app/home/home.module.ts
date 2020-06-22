@@ -7,6 +7,10 @@ import { CarReserveComponent } from './car-reserve/car-reserve.component';
 import { WhatWeOfferComponent } from './what-we-offer/what-we-offer.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { BackgroundBannerComponent } from '../background-banner/background-banner.component';
+import { CarsFleetComponent } from './cars-fleet/cars-fleet.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @NgModule({
   imports: [
@@ -19,7 +23,11 @@ import { BackgroundBannerComponent } from '../background-banner/background-banne
     CarReserveComponent,
     WhatWeOfferComponent,
     NavbarComponent,
-    BackgroundBannerComponent
+    BackgroundBannerComponent,
+    CarsFleetComponent,
+    TestimonialsComponent,
+    AboutComponent,
+    FooterComponent
   ]
 })
 

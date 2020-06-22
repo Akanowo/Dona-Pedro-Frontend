@@ -24,14 +24,39 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/animate.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/shared/css/infinite-slider.css",
+              "./src/shared/css/animate.css",
+              "./src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              
+              {
+                "input": "node_modules/jquery/dist/jquery.min.js",
+                "inject": false,
+                "bundleName": "jquery"
+               },
+               
+              {
+                "input": "./node_modules/popper.js/dist/popper.min.js",
+                "inject": false,
+                "bundleName": "popper"
+               },
+               {
+                "input": "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "inject": false,
+                "bundleName": "bootstrap"
+               },
+               {
+                "input": "./src/shared/js/slick.js",
+                "inject": false,
+                "bundleName": "slick"
+               },
+               {
+                "input": "./src/shared/js/scripts.js",
+                "inject": false,
+                "bundleName": "scripts"
+               }
             ]
           },
           "configurations": {

@@ -1,0 +1,95 @@
+#footer {
+  background: #010311;
+  padding: 2em;
+  margin-top: 8em;
+}
+
+#footer h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+#footer h2 span {
+  color: #FFBE4D;
+}
+
+#footer p {
+  font-family: 'Poppins', sans-serif;
+  color: #949494;
+}
+
+.footer-text {
+  position: relative;
+  top: 10%;
+}
+
+form {
+  background-color: #fff;
+  padding: 2em;
+}
+
+form h3 {
+  color: #010311;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+}
+
+form input, select {
+  border: 1px solid #949494;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 3em;
+}
+
+form select {
+  color: #FFBE4D;
+  text-transform: uppercase;
+}
+
+form select:focus {
+  background: none;
+}
+
+form input::placeholder, label {
+  color: #949494;
+}
+
+form button {
+  background-color: #010311;
+  color: #fff;
+}
+
+i {
+  margin: 20px;
+  background-color: #FFBE4D;
+  border-radius: 48%;
+  color: #010311;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  form {
+    margin-top: 4em;
+  }
+}
+
+@media (max-width: 281px) {
+  .col-md-6 {
+    padding: 10px;
+  }
+  
+  i {
+    margin: 10px;
+  }
+}

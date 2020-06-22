@@ -1,0 +1,51 @@
+<div class="container-fluid" id="cars-fleet">
+  <div class="row">
+    <div class="col-md-12 mt-5 p-5 cars-fleet-heading">
+      <span>Check our fleet of cars</span>
+      <h1>Cars in our fleet</h1>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="row">
+      <div class="col-md-4 p-4" *ngFor="let car of cars">
+        <div class="card">
+          <img [src]="car.imgUrl" alt="Car Image">
+          <div class="car-details">
+            <div class="car-details-heading">
+              <h2>{{car.name}}</h2>
+              <p>{{car.condition}}</p>
+            </div>
+            <div class="d-flex">
+              <div class="d-flex">
+                <img src="assets/icons/Icon awesome-exchange-alt.png" alt="">
+                <div>
+                  <p class="m-0" style="color: #949494;">Transition</p>
+                  <p>{{car.transition}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <img src="assets/icons/Icon awesome-car.png" alt="">
+                <div>
+                  <p class="m-0" style="color: #949494;">Body Type</p>
+                <p>{{car.bodyType}}</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <img src="assets/icons/Icon material-airline-seat-recline-extra.png" alt="">
+                <div>
+                  <p class="m-0" style="color: #949494;">Capacity</p>
+                <p>{{car.capacity}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reserveButton">
+      <button class="btn form-control">See More Vehicles</button>
+    </div>
+    
+  </div>
+</div>

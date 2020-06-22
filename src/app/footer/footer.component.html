@@ -1,0 +1,45 @@
+<div class="container-fluid" id="footer">
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <div class="footer-text">
+        <h2><span>Secured</span> Wheels</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt odit incidunt libero obcaecati quam sunt,
+          officiis animi temporibus ipsa eveniet, consequuntur numquam repudiandae earum dolore ratione totam eos
+          aperiam ex?</p>
+        <div class="service-hours">
+          <h2><span>Service</span> hours</h2>
+          <div class="d-flex">
+            <p>Monday-Friday</p>
+            <p>08:00am - 06:00pm</p>
+          </div>
+          <p>For hours before 6pm contact us via 07xxxxxxxx</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form #messageForm = "ngForm" (ngSubmit) = "onSubmit(messageForm.value)">
+        <h3 class="mb-5">Leave us a Message</h3>
+        <div class="form-group">
+          <input type="text" name="name" [(ngModel)]="name" class="form-control" placeholder="Name:">
+        </div>
+        <div class="form-group">
+          <input type="text" name="email" [(ngModel)]="email" class="form-control" placeholder="Email:">
+        </div>
+        <div class="form-group">
+          <input type="text" name="message" class="form-control" placeholder="Message:">
+        </div>
+        <button class="btn form-control">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-5" id="footer-icons">
+    <div class="col-md-12 text-center">
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+      <p>Copyright 2020. Dona Pedro Agencies.</p>
+    </div>
+    
+  </div>
+</div>
