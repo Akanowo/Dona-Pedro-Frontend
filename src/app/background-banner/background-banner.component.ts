@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BackgroundBannerComponent implements OnInit {
 
+  reserveUrl = '#carReserve';
   constructor() { }
 
   ngOnInit(): void {

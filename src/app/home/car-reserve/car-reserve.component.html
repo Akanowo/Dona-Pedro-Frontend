@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-md-6 p-0">
       <div class="reserve-container">
-        <form action="" #reserveForm = "ngForm" method="POST" (ngSubmit) = "onSubmit(reserveForm.value)">
+        <form action="" #reserveForm="ngForm" method="POST" (ngSubmit)="onSubmit(reserveForm.value)">
           <div class="form-group">
             <input type="text" name="departure" [(ngModel)]="departure" name="departure" class="form-control"
               placeholder="Departure">
@@ -29,17 +29,38 @@
               <label for="date">Date</label>
               <input type="date" placeholder="Date" [(ngModel)]="date" class="form-control" name="date">
             </div>
-            <div class="form-group ml-5">
+            <div class="form-group">
               <label for="time">Time</label>
               <input type="time" class="form-control" [(ngModel)]="time" name="time" placeholder="Time">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="carList">Departure Car</label>
-            <select class="form-control" [(ngModel)]="departureCar" name="car" id="cars">
-              <option *ngFor="let car of cars" selected>
-                {{car}}
+            <label for="carList">Car Category</label>
+            <select class="form-control" [(ngModel)]="carCategory" name="category"
+              (change)="getCategoryCars(carCategory)">
+              <option value="Select Category" selected>Select Category</option>
+              <option *ngFor="let category of categories">
+                {{category}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="carList">Car</label>
+            <select class="form-control" [(ngModel)]="departureCar" name="car" (change)="getModel(departureCar)">
+              <option value="Select a car" selected>Select Car</option>
+              <option *ngFor="let car of cars">
+                {{car.car}}
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group" [hidden] = "isDisabled">
+            <label for="carList">Model</label>
+            <select class="form-control" [(ngModel)]="model" name="model">
+              <option value="Select a model" selected>Select a model</option>
+              <option *ngFor="let model of models">
+                {{model}}
               </option>
             </select>
           </div>
@@ -56,3 +77,6 @@
     </div>
   </div>
 </div>
+
+<ngx-spinner name = "main" type = "ball-clip-rotate"></ngx-spinner>
+<ngx-spinner name = "sub" type = "ball-scale-ripple-multiple"></ngx-spinner>

@@ -25,6 +25,10 @@
   padding: 4em;
 }
 
+.reserve-container form input {
+  color: #949494;
+}
+
 .reserve-container form input, select {
   border: 1px solid #949494;
   border-top: none;
@@ -49,12 +53,25 @@
   color: #949494;
 }
 
+.d-flex .form-group:nth-child(odd) {
+  margin: 0px 6em 0px 0px;
+}
+
+.d-flex .form-group:nth-child(even) {
+  margin: 0px 0px 0px 10px;
+}
+
 input[type="date"], input[type="time"] {
   color: #949494;
 }
 
+select option {
+  color: #010311;
+}
+
 .reserve-container form button {
   background-color: #FFBE4D;
+  color: #000;
 }
 
 #carReserve-img-block span{
@@ -67,6 +84,12 @@ input[type="date"], input[type="time"] {
 }
 
 /* Media queries */
+
+@media (max-width: 1030px) {
+  .d-flex .form-group:nth-child(odd) {
+    margin: 0px 2em 0px 0px;
+  }
+}
 
 @media (max-width: 480px) {
   .reserve-container {

@@ -68,11 +68,11 @@ form button {
 i {
   margin: 20px;
   background-color: #FFBE4D;
-  border-radius: 48%;
+  border-radius: 50% 50%;
   color: #010311;
   font-size: 25px;
-  padding: 10px;
   cursor: pointer;
+  padding: 20px;
 }
 
 

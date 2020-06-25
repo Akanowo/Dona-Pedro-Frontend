@@ -11,12 +11,21 @@ import { CarsFleetComponent } from './cars-fleet/cars-fleet.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from '../footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
+
+const homeRoutes: Routes  = [];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgxSpinnerModule,
+    HttpClientModule,
+    RouterModule.forChild(homeRoutes)
   ],
   declarations: [
     HomeComponent,
