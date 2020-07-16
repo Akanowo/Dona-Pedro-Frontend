@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home.component';
 import { CarReserveComponent } from './car-reserve/car-reserve.component';
@@ -10,10 +10,13 @@ import { BackgroundBannerComponent } from '../background-banner/background-banne
 import { CarsFleetComponent } from './cars-fleet/cars-fleet.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { AboutComponent } from './about/about.component';
-import { FooterComponent } from '../footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { TransferComponent } from './transfer/transfer.component';
+import { DailyRentalComponent } from './daily-rental/daily-rental.component';
+import { FooterModule } from '../footer/footer.module';
+import { HomeBannerComponent } from './home-banner/home-banner.component';
 
 
 const homeRoutes: Routes  = [];
@@ -22,9 +25,11 @@ const homeRoutes: Routes  = [];
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     NgxSpinnerModule,
     HttpClientModule,
+    FooterModule,
     RouterModule.forChild(homeRoutes)
   ],
   declarations: [
@@ -36,8 +41,11 @@ const homeRoutes: Routes  = [];
     CarsFleetComponent,
     TestimonialsComponent,
     AboutComponent,
-    FooterComponent
-  ]
+    TransferComponent,
+    DailyRentalComponent,
+    HomeBannerComponent,
+  ],
+  exports: [ NavbarComponent, BackgroundBannerComponent ]
 })
 
 export class HomeModule {}

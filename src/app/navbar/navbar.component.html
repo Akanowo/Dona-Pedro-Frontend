@@ -14,21 +14,24 @@
       <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="navbar-nav pl-md-5 ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" [routerLink]="[ '/home']" routerLinkActive="active">Home</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" [routerLink]="[ '/about']" routerLinkActive="active">About</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/services">D-Clean</a>
+              <a class="nav-link"  [routerLink]="[ '/dclean']" routerLinkActive="active">D-Clean</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/clients">Contact</a>
+              <a class="nav-link"  [routerLink]="[ '/gallery']" routerLinkActive="active">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="[ '/contact']" routerLinkActive="active">Contact</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link" href="/portfolio">Promotions</a>
+            <a class="nav-link" [routerLink]="[ '/promotions']" routerLinkActive="active">Promotions</a>
           </li>
         </ul>
       </div>

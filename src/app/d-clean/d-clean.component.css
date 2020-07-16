@@ -1,0 +1,85 @@
+/* General styles */
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+.background-cover {
+  background: url('../../assets/images/photography-of-gray-sports-car-919073.jpg') center no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+}
+
+.background-text {
+  color: #fff !important;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.background-text h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+span {
+  color: #FFBE4D;
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* About us section */
+
+#aboutus, #blueContainer {
+  margin-top: 10em;
+}
+
+#aboutus h1 {
+  margin-top: 5px;
+  font-size: 48px;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Blue Container */
+
+#blueContainer {
+  background-color: #010311;
+}
+
+#blueContainer h2 {
+  color: #fff;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#blueContainer p {
+  color: #949494;
+}
+
+
+/* why section */
+#why {
+  margin: 10em 0 0;
+}
+
+#why .section-header {
+  text-align: center;
+}
+
+
+#why .card {
+  border: none;
+}
+
+#why .card-header {
+  background: none;
+}
+
+#why a {
+  color: #000;
+}

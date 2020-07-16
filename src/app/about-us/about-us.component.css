@@ -1,0 +1,146 @@
+.background-cover {
+  background: url('../../assets/images/photography-of-gray-sports-car-919073.jpg') center no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+}
+
+.background-text {
+  color: #fff !important;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.background-text h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.background-text p {
+  color: #fff !important;
+}
+
+.background-text button {
+  border: 1px solid #FFBE4D;
+  margin: 10px;
+  color: #fff;
+  padding: 1em;
+}
+
+.background-text button:nth-child(odd) {
+  background-color: #FFBE4D;
+  color: #000;
+}
+
+.background-text button:hover {
+  background: #FFBE4D;
+  color: #000;
+}
+
+span {
+  color: #FFBE4D;
+  display: block;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* About section styles */
+
+#about, #donapedro {
+  margin-top: 10em;
+}
+
+#about img {
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase; 
+}
+
+#about-content h2, .dona-pedro-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+#about-content, .dona-pedro-content {
+  position: relative;
+  top: calc(20% - 2em);
+  margin: 2em;
+}
+
+@media (max-width: 365px) {
+  #about-content {
+    margin: 10px;
+  }
+}
+
+/* Mission and Vision container */
+
+#mission-vision {
+  margin-top: 10em;
+  background-color: #010311;
+  padding: 80px;
+}
+
+#mission-vision h1 {
+  color: #FFBE4D;
+}
+
+#mission-vision p {
+  color: #949494;
+}
+
+
+/* Dona pedro agencies section */
+
+#donapedro img {
+height: calc(100% + 6em);
+}
+
+/* Why Choose us */
+
+#why {
+  margin: 10em 0 0;
+}
+
+#why .card {
+  border: none;
+}
+
+#why .card-header {
+  background: none;
+}
+
+#why a {
+  color: #000;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 310px) {
+  .background-text {
+    top: 35%;
+  }
+
+  .background-text h1 {
+    font-size: 38px;
+  }
+
+  .background-text button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 284px) {
+  .background-text {
+    top: 32%;
+  }
+}

@@ -1,0 +1,121 @@
+.background-cover {
+  background: url('../../assets/images/photography-of-gray-sports-car-919073.jpg') center no-repeat;
+  background-size: cover;
+  height: calc(100vh);
+}
+
+.background-text {
+  color: #fff !important;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.background-text h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 900px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Reserve container */
+
+#carReserve p {
+  width: 50%;
+  margin: 0px auto;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4em;
+}
+
+.reserve-container {
+  background-color: #010311;
+  padding: 4em;
+}
+/* 
+.reserve-container form button, button {
+  background-color: #FFBE4D;
+  color: #000;
+} */
+
+#carReserve-img-block span{
+  color: #FFBE4D;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#carReserve-img-block h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding-top: 0;
+}
+
+#contactText {
+  position: relative;
+  top: 35%;
+  padding: 1em;
+}
+
+form input {
+  color: #949494;
+}
+
+form input {
+  border: 1px solid #949494;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 3em;
+}
+
+form input::placeholder, label {
+  color: #949494;
+}
+
+form button {
+  background-color: #FFBE4D;
+  color: #000;
+}
+
+.error input {
+  border-color: #ff0000;
+}
+
+.error ::-webkit-input-placeholder {
+  color: #999;
+}
+
+.error ::-moz-placeholder {
+  color: #999
+}
+
+.error :-moz-placeholder {
+  color: #999;
+}
+
+ngx-spinner p {
+  color: #fff;
+  font-size: 21px;
+}
+
+/* Media queries */
+
+@media (max-width: 1030px) {
+  .d-flex .form-group:nth-child(odd) {
+    margin: 0px 2em 0px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reserve-container {
+    padding: 2em;
+  }
+
+  #carReserve p {
+    width: 80%;
+  }
+}

@@ -20,6 +20,22 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+#icons {
+  color: #FFBE4D;
+  margin: 10px;
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  font-size: 21px;
+}
+
+#icons i {
+  display: block;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
 .background-text p {
   color: #fff !important;
 }
@@ -43,7 +59,33 @@
 
 
 /* Media Queries */
+
+@media (max-width: 500px) {
+  #icons {
+    top: 90%;
+    left: 37%;
+  }
+
+  #icons i {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 390px) {
+  #icons {
+    left: 33%;
+  }
+}
+
 @media (max-width: 310px) {
+
+  #icons {
+    left: 28%;
+  }
+
   .background-text {
     top: 35%;
   }

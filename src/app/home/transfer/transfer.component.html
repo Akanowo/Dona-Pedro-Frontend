@@ -1,0 +1,69 @@
+<form [formGroup]="transferForm" method="POST" (ngSubmit)="onSubmit(transferForm.value)">
+  <div class="form-group" [ngClass]="{'error': !validateDeparture()}">
+    <label for="departure">Depature</label>
+    <em *ngIf="!validateDeparture()">*Required</em>
+    <select class="form-control" formControlName="departure">
+      <option value="Select Location" selected>Select Location</option>
+      <option *ngFor="let depature of departures">
+        {{depature}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group" [ngClass]="{'error': !validateDestination()}">
+    <label for="departure">Destination</label>
+    <em *ngIf="!validateDestination()">*Required</em>
+    <select class="form-control" formControlName="destination">
+      <option value="Select Location" selected>Select Location</option>
+      <option *ngFor="let destination of destinations">
+        {{destination}}
+      </option>
+    </select>
+  </div>
+  <div class="d-flex">
+    <div class="form-group" [ngClass]="{'error': !validateDropOffDate()}">
+      <label for="date">Dropoff Date</label>
+      <em *ngIf="!validateDropOffDate()">*Required</em>
+      <input type="date" placeholder="Date" formControlName="dropoffDate" class="form-control">
+    </div>
+    <div class="form-group" [ngClass]="{'error': !validateDropOffTime()}">
+      <label for="time">Dropoff Time</label>
+      <em *ngIf="!validateDropOffTime()">*Required</em>
+      <input type="time" class="form-control" formControlName="dropoffTime" placeholder="Time">
+    </div>
+  </div>
+
+  <div class="form-group" [ngClass]="{'error': !validateCarCategory()}">
+    <label for="carList">Car Category</label>
+    <em *ngIf="!validateCarCategory()">*Required</em>
+    <select class="form-control" formControlName="carCategory"
+      (change)="getCategoryCars(transferForm.value.carCategory)">
+      <option value="Select Category" selected>Select Category</option>
+      <option *ngFor="let category of categories">
+        {{category}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group" [ngClass]="{'error': !validateDepartureCar()}">
+    <label for="carList">Car</label>
+    <em *ngIf="!validateDepartureCar()">*Required</em>
+    <select class="form-control" formControlName="departureCar" name="car"
+    (change)="getModel(transferForm.value.departureCar)">
+      <option value="Select a car" selected>Select Car</option>
+      <option *ngFor="let car of cars">
+        {{car.car}}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group" [hidden] = "isDisabled" [ngClass]="{'error': !validateModel()}">
+    <label for="carList">Model</label>
+    <em *ngIf="!validateModel()">*Required</em>
+    <select class="form-control" formControlName="model" name="model">
+      <option value="Select a model" selected>Select a model</option>
+      <option *ngFor="let model of models">
+        {{model}}
+      </option>
+    </select>
+  </div>
+  <button type="submit" [disabled] = "transferForm.invalid" class="btn form-control">Reserve</button>
+</form>

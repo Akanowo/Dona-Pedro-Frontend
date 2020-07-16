@@ -25,51 +25,7 @@
   padding: 4em;
 }
 
-.reserve-container form input {
-  color: #949494;
-}
-
-.reserve-container form input, select {
-  border: 1px solid #949494;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  margin-bottom: 3em;
-}
-
-.reserve-container form select {
-  color: #FFBE4D;
-  text-transform: uppercase;
-}
-
-.reserve-container form select:focus {
-  background: none;
-}
-
-.reserve-container form input::placeholder, label {
-  color: #949494;
-}
-
-.d-flex .form-group:nth-child(odd) {
-  margin: 0px 6em 0px 0px;
-}
-
-.d-flex .form-group:nth-child(even) {
-  margin: 0px 0px 0px 10px;
-}
-
-input[type="date"], input[type="time"] {
-  color: #949494;
-}
-
-select option {
-  color: #010311;
-}
-
-.reserve-container form button {
+.reserve-container form button, button {
   background-color: #FFBE4D;
   color: #000;
 }
@@ -86,10 +42,6 @@ select option {
 /* Media queries */
 
 @media (max-width: 1030px) {
-  .d-flex .form-group:nth-child(odd) {
-    margin: 0px 2em 0px 0px;
-  }
-}
 
 @media (max-width: 480px) {
   .reserve-container {
@@ -99,4 +51,5 @@ select option {
   #carReserve p {
     width: 80%;
   }
+}
 }

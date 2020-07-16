@@ -1,0 +1,81 @@
+form input {
+  color: #949494;
+}
+
+form input, select {
+  border: 1px solid #949494;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 3em;
+}
+
+form select {
+  color: #FFBE4D;
+  text-transform: uppercase;
+}
+
+form select:focus {
+  background: none;
+}
+
+form input::placeholder, label {
+  color: #949494;
+}
+
+.d-flex .form-group:nth-child(odd) {
+  margin: 0px 6em 0px 0px;
+}
+
+.d-flex .form-group:nth-child(even) {
+  margin: 0px 0px 0px 10px;
+}
+
+input[type="date"], input[type="time"] {
+  color: #949494;
+}
+
+select option {
+  color: #010311;
+}
+
+form button {
+  background-color: #FFBE4D;
+  color: #000;
+}
+
+em {
+  color: #da2020;
+  float: right;
+}
+
+.error label {
+  color: #da2020;
+}
+
+.error select {
+  border-color: #ff0000;
+}
+
+.error ::-webkit-input-placeholder {
+  color: #999;
+}
+
+.error ::-moz-placeholder {
+  color: #999
+}
+
+.error :-moz-placeholder {
+  color: #999;
+}
+
+/* Media queries */
+
+@media (max-width: 1030px) {
+  .d-flex .form-group:nth-child(odd) {
+    margin: 0px 2em 0px 0px;
+  }
+}
