@@ -17,13 +17,13 @@
   background-color: #010311;
   margin-bottom: 2em;
   border: 4px solid #030724;
-  height:   75%;
+  height: 90%;
 }
 
 #cars-fleet .card img {
   background-color: #010311;
-  height: 100%;
-  width: 100%;
+  height: 25%;
+  width: 60%;
   margin: 0px auto;
 }
 
@@ -84,12 +84,12 @@ button {
     text-align: center;
   }
 
-  #cars-fleet .card {
-    background-color: #010311;
-    margin-bottom: 2em;
-    border: 4px solid #030724;
-    height: 90%;
-  }
+#cars-fleet .card {
+  background-color: #010311;
+  margin-bottom: 2em;
+  border: 4px solid #030724;
+  height: 90%;
+}
 }
 
 
@@ -107,5 +107,7 @@ button {
     text-align: center;
   }
 
- 
+  #car-fleet .but-data  button{
+    
+  }
 }
