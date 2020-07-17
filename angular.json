@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "dona-pedro": {
@@ -31,33 +31,31 @@
               "./node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
-              
               {
                 "input": "node_modules/jquery/dist/jquery.min.js",
                 "inject": false,
                 "bundleName": "jquery"
-               },
-               
+              },
               {
                 "input": "./node_modules/popper.js/dist/popper.min.js",
                 "inject": false,
                 "bundleName": "popper"
-               },
-               {
+              },
+              {
                 "input": "./node_modules/bootstrap/dist/js/bootstrap.min.js",
                 "inject": false,
                 "bundleName": "bootstrap"
-               },
-               {
+              },
+              {
                 "input": "./src/shared/js/slick.js",
                 "inject": false,
                 "bundleName": "slick"
-               },
-               {
+              },
+              {
                 "input": "./src/shared/js/scripts.js",
                 "inject": false,
                 "bundleName": "scripts"
-               }
+              }
             ]
           },
           "configurations": {
@@ -151,6 +149,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dona-pedro"
+    }
+  },
+  "defaultProject": "dona-pedro",
+  "cli": {
+    "analytics": false
+  }
 }

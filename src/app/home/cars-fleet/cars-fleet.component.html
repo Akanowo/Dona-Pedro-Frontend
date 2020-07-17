@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <div class="">
+  <div class="cars-sec">
     <div class="row">
       <div class="col-md-4 p-4" *ngFor="let car of cars">
         <div class="card">
@@ -28,16 +28,22 @@
                 <img src="assets/icons/Icon awesome-car.png" alt="">
                 <div>
                   <p class="m-0" style="color: #949494;">Body Type</p>
-                <p>{{car.bodyType}}</p>
+                  <p>{{car.bodyType}}</p>
                 </div>
               </div>
               <div class="col-md-4 col-sm-4">
                 <img src="assets/icons/Icon material-airline-seat-recline-extra.png" alt="">
                 <div>
                   <p class="m-0" style="color: #949494;">Capacity</p>
-                <p>{{car.capacity}}</p>
+                  <p>{{car.capacity}}</p>
                 </div>
               </div>
+            </div>
+
+            <div class="but-data">
+              <button class="btn form-control mt-2" id="see-more" >
+                <p> SEE MORE </p>
+              </button>
             </div>
           </div>
         </div>
@@ -46,6 +52,27 @@
     <div id="reserveButton">
       <button class="btn form-control">See More Vehicles</button>
     </div>
-    
+
   </div>
 </div>
+
+
+<!-- <div class="modal">
+
+  <div class="container">
+    <div class="image">
+      <img src="assets/icons/Icon material-airline-seat-recline-extra.png" alt="">
+    </div>
+
+    <div class="description">
+      <div class="header">
+        <h3> Lorem, ipsum.</h3>
+      </div>
+      <div class="subtitle">
+        <p> Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Repudiandae eius consequatur minima nesciunt laboriosam quaerat vel. Omnis excepturi
+          similique eos.</p>
+      </div>
+    </div>
+  </div>
+</div> -->
