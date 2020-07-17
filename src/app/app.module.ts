@@ -17,10 +17,11 @@ import { DCleanComponent } from './d-clean/d-clean.component';
 import { ContactComponent } from './contact/contact.component';
 import { FeedBackService } from 'src/shared/feedback-api.service';
 import { FooterModule } from './footer/footer.module';
-import { CarsCollectionComponent } from './cars-collection/cars-collection.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { EmailVerificationService } from 'src/shared/email-verification-api.service';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { EventsService } from 'src/shared/events.service';
+import { SlicePipe } from '@angular/common';
 
 
 const appRoutes: Routes = [];
@@ -31,7 +32,6 @@ const appRoutes: Routes = [];
     AboutBannerComponent,
     DCleanComponent,
     ContactComponent,
-    CarsCollectionComponent,
     PromotionsComponent
   ],
   imports: [
@@ -47,7 +47,7 @@ const appRoutes: Routes = [];
     ToastrModule.forRoot()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [ CarReserveService, FeedBackService, EmailVerificationService ],
+  providers: [ CarReserveService, FeedBackService, EmailVerificationService, EventsService, SlicePipe ],
   bootstrap: [AppComponent],
    exports: [ NavbarComponent, ReactiveFormsModule, BackgroundBannerComponent ]
 })

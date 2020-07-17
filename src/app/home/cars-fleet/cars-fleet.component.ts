@@ -12,7 +12,7 @@ export class CarsFleetComponent implements OnInit {
 
   cars: Array < object > = [{
       name: 'Feugo Margery',
-      imgUrl: 'assets/images/bmw-22462.png',
+      imgUrl: 'assets/images/extracted/',
       condition: 'In perfect working condition',
       transition: 'Automatic',
       bodyType: 'Sports',

@@ -6,7 +6,6 @@ import { DailyRentalComponent } from './home/daily-rental/daily-rental.component
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DCleanComponent } from './d-clean/d-clean.component';
 import { ContactComponent } from './contact/contact.component';
-import { CarsCollectionComponent } from './cars-collection/cars-collection.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 
 
@@ -22,7 +21,6 @@ const routes: Routes = [
   },
   { path: 'about', component: AboutUsComponent },
   { path: 'dclean', component: DCleanComponent },
-  { path: 'gallery', component: CarsCollectionComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'promotions', component: PromotionsComponent },
   { path: '**', redirectTo: 'home/transfer', pathMatch: 'full' }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventsService } from 'src/shared/events.service';
+import { IEvent } from 'src/shared/events';
 
 @Component({
   selector: 'app-promotions',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromotionsComponent implements OnInit {
   heading = 'Promotions';
-  constructor() { }
+  events: IEvent[];
+  constructor(private eventService: EventsService) { }
 
   ngOnInit(): void {
+    this.events = this.eventService.getEvents();
   }
 
 }

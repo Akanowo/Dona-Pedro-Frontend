@@ -10495,7 +10495,6 @@ a:hover {
 
 h1,
 h2,
-h3,
 h4,
 h5 {
   line-height: 1.5;
@@ -12345,19 +12344,6 @@ figure figcaption {
 }
 
 
-.sec {
-  width: 100%;
-  /* height: 30%; */
-  max-width: 98rem;
-  padding: 2rem 1rem 0 1rem;
-  /* background-color: #fff;
-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1); */
-  display: flex;
-  align-items: center;
-
-}
-
-
 /* .circle {
   border-top-left-radius: 50% 50%;
   border-top-right-radius: 50% 50%;
@@ -12382,17 +12368,3 @@ box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1); */
   background: rgba(255,255,255,1);
   border-radius: 5px 0px 0px 5px;
   }
-
-@media (max-width: 950px) {
-  .sec {
-    width: 100%;
-    height: 100%;
-    max-width: 98rem;
-    padding: 5rem;
-    /* background-color: #fff;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1); */
-    display: flex;
-    align-items: center;
-
-  }
-}
