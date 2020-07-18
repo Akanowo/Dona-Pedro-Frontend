@@ -72,6 +72,21 @@ em {
   color: #999;
 }
 
+#modalContent {
+  background-color: #010311;
+}
+
+.modal-header h5 {
+  color: #fff;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+#modalCloseBtn {
+  background-color: #FFBE4D;
+}
 /* Media queries */
 
 @media (max-width: 1030px) {

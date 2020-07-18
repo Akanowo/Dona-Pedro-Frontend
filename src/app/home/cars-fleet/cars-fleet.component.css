@@ -22,7 +22,7 @@
 
 #cars-fleet .card img {
   background-color: #010311;
-  height: 25%;
+  height: 40%;
   width: 60%;
   margin: 0px auto;
 }
@@ -55,7 +55,11 @@
   height: 20px;
   width: 20px;
   margin: 8px;
+}
 
+.but-data button {
+  margin-bottom: 6em;
+  color: #000;
 }
 
 
@@ -105,9 +109,5 @@ button {
 
   #car-fleet #see-more p {
     text-align: center;
-  }
-
-  #car-fleet .but-data  button{
-    
   }
 }

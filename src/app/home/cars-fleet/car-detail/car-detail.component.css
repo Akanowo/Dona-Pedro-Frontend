@@ -1,0 +1,43 @@
+.carImage {
+  width: 70%;
+  margin: 0px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat-bold', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, p {
+  color: #000;
+}
+
+.carImage img {
+  margin-top: 120px;
+}
+
+
+#price {
+  background-color: #010311;
+  color: #FFBE4D;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#reserveContainer {
+  width: 50%;
+  margin: 4em auto 0;
+}
+
+#reserveContainer h1{
+  text-transform: uppercase;
+}
+
+#reserveBtn {
+  background-color: #FFBE4D;
+}

@@ -1,4 +1,4 @@
-export interface ICars {
+export interface ICarReserve {
   cars: [
     { car: string, model: Array<string> }
   ];

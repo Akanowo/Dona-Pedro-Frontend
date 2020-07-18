@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarReserveService } from '../car-reserve/car-reserve-api.service';
 import { IReserve } from '../car-reserve/car-reserve-api.model';
-import { ICars } from '../car-reserve//cars.model';
+import { ICarReserve } from '../car-reserve//cars.model';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { IReserveResponse } from '../car-reserve//reserve.model';
@@ -21,6 +21,9 @@ export class TransferComponent implements OnInit {
   private carCategory: FormControl;
   private departureCar: FormControl;
   private model: FormControl;
+  private email: FormControl;
+  private name: FormControl;
+  private phone: FormControl;
 
   categories: Array<string>;
   departures: Array<string>;
@@ -33,6 +36,18 @@ export class TransferComponent implements OnInit {
   constructor(private reservation: CarReserveService, private spinner: NgxSpinnerService,
               private toastr: ToastrService) {
     this.getCategories();
+  }
+
+  validatePhone() {
+    return this.phone.valid || this.phone.untouched;
+  }
+
+  validateName() {
+    return this.name.valid || this.name.untouched;
+  }
+
+  validateEmail() {
+    return this.email.valid || this.email.untouched;
   }
 
   validateDeparture() {
@@ -86,7 +101,7 @@ export class TransferComponent implements OnInit {
     }
     this.spinner.show('sub');
     try {
-      this.reservation.getCategoryCars(category).subscribe((response: ICars) => {
+      this.reservation.getCategoryCars(category).subscribe((response: ICarReserve) => {
         this.spinner.hide('sub');
         console.log(response);
         this.cars = response.cars;
@@ -132,6 +147,7 @@ export class TransferComponent implements OnInit {
   }
 
   onSubmit(formValues) {
+    console.log(formValues);
     this.spinner.show('main');
     try {
       this.reservation.makeReservation(formValues).subscribe((response: IReserveResponse) => {
@@ -168,7 +184,10 @@ export class TransferComponent implements OnInit {
     this.dropOffTime = new FormControl('', [Validators.required]);
     this.carCategory = new FormControl('', [Validators.required]);
     this.departureCar = new FormControl('', [Validators.required]);
-    this.model = new FormControl('', [Validators.required]);
+    this.model = new FormControl('');
+    this.email = new FormControl('', [Validators.required, Validators.email]);
+    this.name = new FormControl('', [Validators.required]);
+    this.phone = new FormControl('', [Validators.required, Validators.minLength(5)]);
 
     this.transferForm = new FormGroup({
       departure: this.departure,
@@ -177,7 +196,10 @@ export class TransferComponent implements OnInit {
       dropoffTime: this.dropOffTime,
       carCategory: this.carCategory,
       departureCar: this.departureCar,
-      model: this.model
+      model: this.model,
+      email: this.email,
+      name: this.name,
+      phone: this.phone
     });
   }
 

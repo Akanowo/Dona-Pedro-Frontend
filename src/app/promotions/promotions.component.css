@@ -47,11 +47,16 @@ p {
 }
 
 .card-header img {
-  height: 400px;
+  height: 300px;
 }
 
 .card-body {
   color: #000;
+}
+
+.card button {
+  background-color: #010311;
+  color: #fff;
 }
 
 .card-body:hover {
@@ -65,3 +70,21 @@ p {
 #cards {
   margin-bottom: 1.5em;
 }
+
+/* Modal Styles */
+
+.modal h2 {
+  text-transform: uppercase;
+}
+
+.modal p {
+  color: #333131;
+}
+
+.modal img {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+

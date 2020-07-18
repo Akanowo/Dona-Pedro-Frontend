@@ -22,6 +22,7 @@ import { EmailVerificationService } from 'src/shared/email-verification-api.serv
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { EventsService } from 'src/shared/events.service';
 import { SlicePipe } from '@angular/common';
+import { CarService } from './home/cars-fleet/cars.service';
 
 
 const appRoutes: Routes = [];
@@ -44,10 +45,10 @@ const appRoutes: Routes = [];
     HomeModule,
     FooterModule,
     NgxSpinnerModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [ CarReserveService, FeedBackService, EmailVerificationService, EventsService, SlicePipe ],
+  providers: [ CarReserveService, FeedBackService, EmailVerificationService, EventsService, SlicePipe, CarService ],
   bootstrap: [AppComponent],
    exports: [ NavbarComponent, ReactiveFormsModule, BackgroundBannerComponent ]
 })

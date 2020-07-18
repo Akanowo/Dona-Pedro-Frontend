@@ -2,6 +2,8 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import { ICar } from './cars';
+import { CarService } from './cars.service';
 
 @Component({
   selector: 'app-cars-fleet',
@@ -9,58 +11,16 @@ import {
   styleUrls: ['./cars-fleet.component.css']
 })
 export class CarsFleetComponent implements OnInit {
+  cars: ICar[];
+  constructor(private carService: CarService) {}
 
-  cars: Array < object > = [{
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/extracted/',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-    {
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/bmw-22478.png',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-    {
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/bmw-22480.png',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-    {
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/PNGPIX-COM-Aston-Martin-Vantage-GT4-White-Car-PNG-Image.png',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-    {
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/honda-car-37313.png',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-    {
-      name: 'Feugo Margery',
-      imgUrl: 'assets/images/bmw-22462.png',
-      condition: 'In perfect working condition',
-      transition: 'Automatic',
-      bodyType: 'Sports',
-      capacity: '2 seats'
-    },
-  ];
-  constructor() {}
+  getCars() {
+    this.cars = this.carService.getCars();
+  }
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.getCars();
+  }
 
 }

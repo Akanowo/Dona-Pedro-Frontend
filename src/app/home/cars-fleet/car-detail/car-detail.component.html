@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<app-background-banner [heading] = "car.name"></app-background-banner>
+
+<div class="container" *ngIf="car" id="carDescription">
+  <div class="carImage">
+    <img [src]="car.imgUrl" alt="">
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="text-uppercase">{{car.name}} {{car.model}}</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Inventore minus distinctio cumque ex sint voluptatem sunt magnam sed id earum fuga dolorum culpa sit, 
+        maiores ut expedita. Delectus, deleniti quidem.</p>
+        <span id="price" type="button">$500/day</span>
+    </div>
+  
+    <div class="col-md-6 pl-5">
+      <h2 class="text-uppercase">Condition of car</h2>
+        <p>{{car.condition}}</p>
+        <p>Used twice since release</p>
+        <p>Brake in shape</p>
+        <p>Headlight is sharp</p>
+    </div>
+  </div>
+
+  <div id="reserveContainer">
+    <div class="text-center">
+      <h1>Reserve Now!</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vero a cupiditate voluptas reprehenderit
+        dolor,
+        atque aliquam! Magni, optio cum.</p>
+        <button type="button" class="btn form-control text-black" id="reserveBtn" [routerLink]="['/home/transfer']" >Click to reserve</button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

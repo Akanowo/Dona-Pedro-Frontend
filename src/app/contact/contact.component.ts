@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
               private toastr: ToastrService, private verifyMail: EmailVerificationService) { }
 
   emailVerify(email: string) {
+    this.spinner.show('main');
     this.verifyMail.verifyEmail(email).subscribe((response: IClearout) => {
       if (!response) {
         this.spinner.hide('main');
@@ -33,12 +34,15 @@ export class ContactComponent implements OnInit {
         this.toastr.info('Email Address Valid!', 'Success', {
           positionClass: 'toast-bottom-left'
         });
+        this.contactForm.controls.name.enable();
+        this.contactForm.controls.phone.enable();
+        this.contactForm.controls.message.enable();
       }
       if (data.status === 'invalid') {
         this.contactForm.controls.name.disable();
         this.contactForm.controls.phone.disable();
         this.contactForm.controls.message.disable();
-        this.toastr.error('Couldn\'t validate email', 'Error', {
+        this.toastr.error('Invalid email address', 'Error', {
           positionClass: 'toast-bottom-left'
         });
         return false;

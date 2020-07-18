@@ -22,7 +22,7 @@ const events: IEvent[] = [{
    items many different cuisines such as sushi, chicken parmigiana and Ruben sandwiches.
   In our event a lot of card games with water games will be provided with a lot dressed like sea creatures so
   imagine hundreds of gorgeous looking mermaids frolicking in the pool with their multi-color tails, wow that's romantic.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/pool-parties.jpg'
   },
 
   {
@@ -31,7 +31,7 @@ const events: IEvent[] = [{
     Every last Friday's with a different party themes like masked party, all white party.
     Its going to be a bevy of fun with beautiful people. You differently need a linkup with
      bad bitches or a cool cat. A club party with the best DJs and the right people makes your night lit. `,
-    imgUrl: 'assets/images/club.jpg'
+    imgUrl: 'assets/images/promotions/club-party.jpg'
   },
 
   {
@@ -44,7 +44,7 @@ const events: IEvent[] = [{
     name: 'Brand Activation',
     desc: `We help brands with their activations once a month especially
      for the liquor companies. If you love to party hard watch this space for more events and venues.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/brand.jpf'
   },
 
   {
@@ -62,7 +62,7 @@ const events: IEvent[] = [{
     Exhibit sponsors receive long-term recognition and exposure for the duration of the
     show and the exclusive opportunity to host a private reception in the intimate gallery
     space-how about an employee happy hour or a customer thank-you event?`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/street-gallery.jpg'
   },
 
   {
@@ -80,7 +80,7 @@ const events: IEvent[] = [{
     At our event a lot of card games with water games will be provided and the selected pretty females
     better will be dressed like mermaids, so imagine hundreds of gorgeous looking mermaids
      frolicking in the pool beach with their multi-color tails, wow that's romantic.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/beach-party.jpg'
   },
 
   {

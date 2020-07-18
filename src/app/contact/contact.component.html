@@ -12,10 +12,10 @@
     </div>
     <div class="col-md-6 p-0">
       <div class="reserve-container">
-        <form method="POST" [formGroup]="contactForm" (ngSubmit) = "emailVerify(contactForm.value.email)" (ngSubmit) = "onSubmit(contactForm.value)">
+        <form method="POST" [formGroup]="contactForm" (ngSubmit) = "onSubmit(contactForm.value)">
           <div class="form-group" [ngClass]="{'error': contactForm.controls.email.invalid && 
             contactForm.controls.email.touched}">
-            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+            <input type="email" formControlName="email" class="form-control" placeholder="Email" (change) = "emailVerify(contactForm.value.email)">
           </div>
           <div class="form-group" [ngClass]="{'error': contactForm.controls.name.invalid &&
             contactForm.controls.name.touched}">

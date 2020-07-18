@@ -17,6 +17,7 @@ import { TransferComponent } from './transfer/transfer.component';
 import { DailyRentalComponent } from './daily-rental/daily-rental.component';
 import { FooterModule } from '../footer/footer.module';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
+import { CarDetailComponent } from './cars-fleet/car-detail/car-detail.component';
 
 
 const homeRoutes: Routes  = [];
@@ -44,6 +45,7 @@ const homeRoutes: Routes  = [];
     TransferComponent,
     DailyRentalComponent,
     HomeBannerComponent,
+    CarDetailComponent,
   ],
   exports: [ NavbarComponent, BackgroundBannerComponent ]
 })

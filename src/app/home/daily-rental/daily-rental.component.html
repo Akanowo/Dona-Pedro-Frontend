@@ -1,4 +1,37 @@
 <form [formGroup]="dailyRentalForm" method="POST" (ngSubmit)="onSubmit(dailyRentalForm.value)">
+    <!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-header">
+        <h5 class="modal-title">Enter Details Below</h5>
+          <button type="button" class="close" data-dismiss="modal" id="modalCloseBtn" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group" [ngClass]="{'error': !validateName()}">
+          <label for="date">Name</label>
+          <em *ngIf="!validateName()">*Required</em>
+          <input type="text" placeholder="Full Name" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group" [ngClass]="{'error': !validateEmail()}">
+          <label for="date">Email</label>
+          <em *ngIf="!validateEmail()">*Required</em>
+          <input type="email" placeholder="example@something.com" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group" [ngClass]="{'error': !validatePhone()}">
+          <label for="date">Phone</label>
+          <em *ngIf="!validatePhone()">*Required</em>
+          <input type="tel" placeholder="eg: 070xxxxxxx" formControlName="phone" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" [disabled] = "dailyRentalForm.invalid" class="btn form-control">Reserve</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="form-group" [ngClass]="{'error': !validateDeparture()}">
     <label for="departure">Depature</label>
     <em *ngIf="!validateDeparture()">*Required</em>
@@ -78,5 +111,7 @@
       </option>
     </select>
   </div>
-  <button type="submit" [disabled] = "dailyRentalForm.invalid" class="btn form-control">Reserve</button>
+  <button type="button" class="btn form-control" data-toggle="modal" data-target="#modelId">
+    Continue
+  </button>
 </form>

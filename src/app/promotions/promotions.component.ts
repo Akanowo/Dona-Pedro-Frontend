@@ -9,8 +9,17 @@ import { IEvent } from 'src/shared/events';
 })
 export class PromotionsComponent implements OnInit {
   heading = 'Promotions';
+  eventName;
+  eventImg;
+  eventDesc;
   events: IEvent[];
   constructor(private eventService: EventsService) { }
+
+  setDetails(name, desc, imgUrl) {
+    this.eventName = name;
+    this.eventDesc = desc;
+    this.eventImg = imgUrl;
+  }
 
   ngOnInit(): void {
     this.events = this.eventService.getEvents();

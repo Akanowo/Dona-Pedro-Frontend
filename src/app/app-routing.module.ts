@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DCleanComponent } from './d-clean/d-clean.component';
 import { ContactComponent } from './contact/contact.component';
 import { PromotionsComponent } from './promotions/promotions.component';
+import { CarDetailComponent } from './home/cars-fleet/car-detail/car-detail.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'dclean', component: DCleanComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'promotions', component: PromotionsComponent },
+  { path: 'cars/:id', component: CarDetailComponent },
   { path: '**', redirectTo: 'home/transfer', pathMatch: 'full' }
 ];
 
