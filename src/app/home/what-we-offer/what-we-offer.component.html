@@ -1,18 +1,32 @@
-<div class="container" id="whatweoffer">
-
-  <div class="row" id="sec-1">
-    <div class="col-lg-12 text-center">
-      <span class="">Get a top notch car</span>
-      <h1>What do we offer?</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vero a cupiditate voluptas reprehenderit dolor,
-        atque aliquam! Magni, optio cum.</p>
+<div id="why" data-aos="zoom-in-down" data-aos-duration="2500">
+  <div class="container">
+    <span>know why</span>
+    <h1>Why Choose Us?</h1>
+    <div id="accordianId" role="tablist" aria-multiselectable="true">
+      <div class="card" *ngFor="let service of services">
+        <div class="card-header" role="tab" [id]="service.id">
+          <img src="assets/images/award-icon.png" alt="">
+          <h5 class="mb-0">
+            <a data-toggle="collapse" data-parent="#accordianId" [href]="service.descIdHref" aria-expanded="true"
+              [attr.aria-controls]="service.descId">
+              {{service.name}} 
+            </a>
+          </h5>
+        </div>
+        <div [id]="service.descId" class="collapse in" role="tabpanel" [attr.aria-labelledby]="service.id">
+          <div class="card-body">
+            {{service.desc}}
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row text-center">
-    <div class="col-md-4" *ngFor="let item of iterator">
-      <div class="img-gallery">
-        <h2>Lorem Ipsum</h2>
+    <div class="row text-center mt-5">
+      <div class="col-md-4" *ngFor="let item of iterator">
+        <div class="ads">
+          <img [src]="item.img" alt="">
+        </div>
       </div>
     </div>
   </div>
+
 </div>

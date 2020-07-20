@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CarReserveService } from '../car-reserve/car-reserve-api.service';
 import { IReserve } from '../car-reserve/car-reserve-api.model';
 import { ICarReserve } from '../car-reserve//cars.model';
@@ -12,7 +12,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './transfer.component.html',
   styleUrls: ['./transfer.component.css']
 })
-export class TransferComponent implements OnInit {
+export class TransferComponent implements OnInit, AfterViewInit {
+  body: HTMLDocument;
+  setMargin: boolean;
   transferForm: FormGroup;
   private departure: FormControl;
   private destination: FormControl;
@@ -94,7 +96,6 @@ export class TransferComponent implements OnInit {
   }
 
   getCategoryCars(category: string) {
-    console.log(category);
     if (category === 'Select Category') {
       this.cars = [];
       this.isDisabled = true;
@@ -103,7 +104,6 @@ export class TransferComponent implements OnInit {
     try {
       this.reservation.getCategoryCars(category).subscribe((response: ICarReserve) => {
         this.spinner.hide('sub');
-        console.log(response);
         this.cars = response.cars;
       }, (err) => {
         this.spinner.hide('sub');
@@ -112,7 +112,6 @@ export class TransferComponent implements OnInit {
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 
@@ -120,7 +119,6 @@ export class TransferComponent implements OnInit {
     this.spinner.show('sub');
     try {
       this.reservation.getCategories().subscribe((response: IReserve) => {
-        console.log(response);
         this.spinner.hide('sub');
         this.categories = response.categories;
         this.departures = response.locations;
@@ -132,7 +130,6 @@ export class TransferComponent implements OnInit {
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 
@@ -147,33 +144,27 @@ export class TransferComponent implements OnInit {
   }
 
   onSubmit(formValues) {
-    console.log(formValues);
     this.spinner.show('main');
     try {
       this.reservation.makeReservation(formValues).subscribe((response: IReserveResponse) => {
-        console.log('Response: ', response);
-        console.log(response.error);
         if (response.error) {
           this.spinner.hide('main');
           this.toastr.error('Check your internet and try again', 'Error', {
             positionClass: 'toast-bottom-left'
           });
         } else {
-          console.log(response);
           this.spinner.hide('main');
           this.toastr.success('Sucess!', 'Car successfully reserved!', {
             positionClass: 'toast-bottom-left'
           });
         }
       }, (err) => {
-        console.log(err);
         this.spinner.hide('main');
         this.toastr.error(err.error.message, 'Error', {
           positionClass: 'toast-bottom-left'
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 
@@ -201,6 +192,14 @@ export class TransferComponent implements OnInit {
       name: this.name,
       phone: this.phone
     });
+  }
+
+  ngAfterViewInit(): void {
+    if(this.body.body.clientWidth <= 320) {
+      this.setMargin = true;
+    } else {
+      this.setMargin = false;
+    }
   }
 
 }

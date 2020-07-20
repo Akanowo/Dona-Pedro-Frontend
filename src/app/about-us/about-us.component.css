@@ -93,6 +93,7 @@ h1 {
 
 #mission-vision h1 {
   color: #FFBE4D;
+  cursor: pointer;
 }
 
 #mission-vision p {

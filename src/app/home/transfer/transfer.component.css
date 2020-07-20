@@ -10,6 +10,9 @@ form input, select {
   background: none;
   padding: 0;
   border-radius: 0;
+}
+
+.form-group {
   margin-bottom: 3em;
 }
 
@@ -52,11 +55,7 @@ em {
   float: right;
 }
 
-.error label {
-  color: #da2020;
-}
-
-.error select {
+.error select, .error input {
   border-color: #ff0000;
 }
 
@@ -87,10 +86,25 @@ em {
 #modalCloseBtn {
   background-color: #FFBE4D;
 }
+
+#flex {
+  display: flex;
+}
 /* Media queries */
 
 @media (max-width: 1030px) {
-  .d-flex .form-group:nth-child(odd) {
+  #flex .form-group:nth-child(odd) {
     margin: 0px 2em 0px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  #flex {
+    display: block;
+  }
+
+  #flex .form-group {
+    margin-right: 0;
+    margin-left: 0;
   }
 }

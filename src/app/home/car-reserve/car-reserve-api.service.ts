@@ -6,9 +6,15 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 
 export class CarReserveService {
-  endpoint = environment.API_ENDPOINT;
-  proxUrl = 'https://cors-anywhere.herokuapp.com/';
-
+  getUrl() {
+    if (environment.production === true) {
+      const endpoint = environment.API_ENDPOINT;
+      const proxUrl = 'https://cors-anywhere.herokuapp.com/';
+      return proxUrl + endpoint;
+    } else {
+      return '/api';
+    }
+  }
 
   constructor(private http: HttpClient) {
     this.getCategories();
@@ -16,7 +22,7 @@ export class CarReserveService {
 
 
   getCategoryCars(category: string) {
-    const url = this.proxUrl + this.endpoint + '/api/get-cars';
+    const url = this.getUrl() + '/get-cars';
     const body = {
       category
     };
@@ -29,7 +35,7 @@ export class CarReserveService {
   }
 
   getCategories() {
-    const url = this.proxUrl + this.endpoint + '/api/reserve-car';
+    const url = this.getUrl() + '/reserve-car';
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -39,7 +45,7 @@ export class CarReserveService {
   }
 
   makeReservation(formValues) {
-    const url = this.proxUrl + this.endpoint + '/api/get-cars';
+    const url = this.getUrl() + '/reserve-car';
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'

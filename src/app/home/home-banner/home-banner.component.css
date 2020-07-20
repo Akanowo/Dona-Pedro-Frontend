@@ -43,6 +43,13 @@
 
 
 /* Media Queries */
+
+@media (max-width: 375px) {
+  .background-cover {
+    height: calc(100vh + 150px);
+  }
+}
+
 @media (max-width: 310px) {
   .background-text {
     top: 35%;

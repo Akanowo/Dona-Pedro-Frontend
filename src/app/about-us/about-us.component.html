@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
-<app-background-banner [heading]="heading"></app-background-banner>>
+<app-background-banner [heading]="heading"></app-background-banner>
 
-<div class="container" id="about">
+<div class="container" id="about" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
+  data-aos-easing="ease-in-sine">
   <div class="row">
     <div class="col-md-6">
       <img src="assets/images/Group21.png" alt="">
@@ -10,8 +11,12 @@
       <div id="about-content">
         <h2>About us</h2>
         <p>
-          It's a family-owned business that was established in 1996 by Dona Pedro. We deliver world standard services in
-          different areas across the board. Dona Pedro is into deep cleaning, car rental, lifestyle entertainment.
+          Dona Pedro Agencies
+          is a family-owned business that was registered in 31 August 2012 by Ukandu Pedro Onyemeachi.
+          We have delivered world-standard services in different areas over the years and have succeeded across boards.
+          From deep cleaning, to lifestyle entertainment and now car rentals. Our delivering of excellent service that
+          meets and exceeds the service expectations of her esteemed clients with maximum client satisfaction guaranteed
+          is what has sustained us over the years.
         </p>
       </div>
     </div>
@@ -19,23 +24,23 @@
 </div>
 
 
-<div class="container-fluid" id="mission-vision">
+<div class="container-fluid" id="mission-vision" data-aos="zoom-in-up" data-aos-duration="2500">
   <div class="row">
     <div class="col-md-6">
-      <h1>Mission</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatum vel aspernatur. Rerum id
+      <h1 (click)="setMissionDisplay()">Mission</h1>
+      <p [hidden] = "missionDisplay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatum vel aspernatur. Rerum id
         molestias repellendus vero laudantium, ratione dicta qui repellat provident voluptas. Distinctio, nemo nobis!
         Distinctio, cum quae.</p>
     </div>
     <div class="col-md-6">
-      <h1>Vision</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est molestias, quidem neque tenetur quod architecto
+      <h1 (click)="setVisionDisplay()">Vision</h1>
+      <p [hidden] = "visionDisplay">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est molestias, quidem neque tenetur quod architecto
         atque laboriosam labore perspiciatis eius inventore autem, at a dolorum, nam doloremque fuga quas nulla.</p>
     </div>
   </div>
 </div>
 
-<div class="container" id="donapedro">
+<div class="container" id="donapedro" data-aos="fade-left" data-aos-duration="2500">
   <div class="row">
     <div class="col-md-6">
       <div id="dona-pedro-content">
@@ -57,87 +62,23 @@
   </div>
 </div>
 
-<div id="why">
+<div id="why" data-aos="zoom-in-down" data-aos-duration="2500">
   <div class="container">
-    <span>know why</span>
-    <h1>Why Choose Us?</h1>
+    <span>What we do</span>
+    <h1>Our services</h1>
     <div id="accordianId" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="section1HeaderId">
+      <div class="card" *ngFor="let service of services">
+        <div class="card-header" role="tab" [id]="service.id">
           <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true"
-              aria-controls="section1ContentId">
-              Outstanding Services
+            <a data-toggle="collapse" data-parent="#accordianId" [href]="service.descIdHref" aria-expanded="true"
+              [attr.aria-controls]="service.descId">
+              {{service.name}} 
             </a>
           </h5>
         </div>
-        <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+        <div [id]="service.descId" class="collapse in" role="tabpanel" [attr.aria-labelledby]="service.id">
           <div class="card-body">
-            Our highly professional customer service team ensue that clients enjoy a Wow service experience.
-            Our reservation response time is next to none.
-            Our range of services are geared towards achieving maximum client satisfaction.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section2HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true"
-              aria-controls="section2ContentId">
-              Masters Of The Road!
-            </a>
-          </h5>
-        </div>
-        <div id="section2ContentId" class="collapse in" role="tabpanel" aria-labelledby="section2HeaderId">
-          <div class="card-body">
-            Our professional chauffeurs are continuously trained to make your trip a memorable one.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section3HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#amored" aria-expanded="true"
-              aria-controls="amored">
-              Movement & Logistics
-            </a>
-          </h5>
-        </div>
-        <div id="amored" class="collapse in" role="tabpanel" aria-labelledby="amored">
-          <div class="card-body">
-            We have the fleet and man power to get you and your products/ services to all states of the federation
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section4HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#premium" aria-expanded="true"
-              aria-controls="premium">
-              Premium Vehicles
-            </a>
-          </h5>
-        </div>
-        <div id="premium" class="collapse in" role="tabpanel" aria-labelledby="premium">
-          <div class="card-body">
-            We offer neat and maintained automobile brands such as Toyota, Honda, BMW, Ford, Dodge, JAGUAR, Mercedes
-            Benz LANDROVER, RANGE ROVER, Lexus vehicles, amongst other brands.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section5HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#airport" aria-expanded="true"
-              aria-controls="airport">
-              Trackers On Every Vehicle
-            </a>
-          </h5>
-        </div>
-        <div id="airport" class="collapse in" role="tabpanel" aria-labelledby="airport">
-          <div class="card-body">
-            Our GPS solution also includes a complete report suite for you, so you can see your data and reports in one
-            easy-to-read format.
+            {{service.desc}}
           </div>
         </div>
       </div>
