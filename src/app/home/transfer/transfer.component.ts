@@ -195,7 +195,7 @@ export class TransferComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if(this.body.body.clientWidth <= 320) {
+    if (this.body.body.clientWidth <= 320) {
       this.setMargin = true;
     } else {
       this.setMargin = false;
