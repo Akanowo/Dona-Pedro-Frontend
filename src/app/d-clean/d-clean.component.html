@@ -1,48 +1,53 @@
 <app-navbar></app-navbar>
-<app-background-banner [heading] = "heading"></app-background-banner>
+<app-background-banner [heading]="heading"></app-background-banner>
 
-<div class="container" id="aboutus">
+<div class="vector" data-aos="zoom-in-down" data-aos-duration="2000">
+  <a href="https://www.freepik.com/free-photos-vectors/people">
+    <img src="assets/images/d-clean/2.jpg" alt="Cleaning vector" id="vector">
+  </a>
+</div>
+
+<div class="container mt-5" id="aboutus" data-aos="fade-in" data-aos-duration="3000">
   <span>You should know</span>
   <h1>About Us</h1>
   <div class="row">
     <div class="col-md-6">
-      <p>Its a deep cleaning and disinfection services born due to the need of concerned people of their hygiene and
-        environment, so we made the decision to make our deep cleaning services more readily available to help give
-        people more peace of mind and take out the likelihood of businesses having infection, so their family members
-        and employees can feel more safe.
+      <p>We take care of the cleaning so you can live your life. Born due to the need of concerned people of their
+        hygiene and
+        environment. We made the decision to make our deep cleaning services readily available to help give
+        people more peace of mind and take out the likelihood of businesses having infection, so family members
+        and employees can feel safe.
         We are happy to have started providing affordable disinfection services to the hospitality and manufacturing
         industry.</p>
     </div>
     <div class="col-md-6">
-      <p>When you’re looking for a reliable commercial or domestic cleaning in Nigeria to take care of your home or
-        business premises, D Clean Services offers you the perfect balance of price and quality. You can be sure that
-        our cleaning teams are polite, friendly and hard-working, never putting off a current cleaning task for their
-        next visit. Due to the impact of the virus on homes and businesses, we have upgraded our equipment and processes
-        in order to also meet the demand for our clients.</p>
+      <p>When you’re looking for a reliable commercial or domestic cleaning in Nigeria to take care of your space or
+        business premises. D Clean Services offers you the perfect balance for price and quality. Be assured that
+        our cleaning team are polite, friendly and hard-working.</p>
     </div>
   </div>
 </div>
 
-<div id="blueContainer">
+<div id="blueContainer" data-aos="zoom-in-down" data-aos-duration="2000">
   <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col-md-6">
         <span>You should know</span>
         <h2>Why Choose Us</h2>
-        <p>You. That is our focus. We manage our business around customer satisfaction. That is why we believe so
-          heavily in clear communication. We want to make sure we understand your expectations and then deliver quality
-          results. One quick call can free up a bunch of time on your future schedule with our cleaning services. We
-          strive to make this as stress-free of a process as possible to ensure your satisfaction. Give us a call today!
+        <p>Choose us because we manage our business around customer satisfaction. That is why we believe so
+          heavily in clear communication. We are a call away from making a stress-free process of value for quality
+          service with our services. Give us a call today?!
         </p>
       </div>
       <div class="col-md-6 second">
         <span>You should know</span>
         <h2>Our Pro Operations</h2>
-        <p>Each of our cleaners go through a background check and are properly trained for the job. You can have the
-          peace of mind that someone trustworthy is entering your home, and you will have the same person cleaning every
-          time. We know and trust each of our cleaners at a personal level. We create and maintain a healthy work
-          environment that allows us to trust each of them to clean your home. We truly love what we do and can't wait
-          to get started cleaning your home.</p>
+        <p>Every member of D-clean service is properly trained and goes through a medical assessment. You can have the
+          peace of mind that someone trustworthy is entering your space. Be rest assured that whoever comes into your
+          work spaces, homes, schools, gyms, hospitals, supermarts etc is trustworthy. We know and trust each of our
+          cleaners at a personal level. We create and maintain a healthy work
+          environment that allows us to trust each of them to clean your space. We truly love what we do and can't wait
+          to get started cleaning your space.</p>
       </div>
     </div>
   </div>
@@ -55,87 +60,31 @@
       <h1>What should we help you with?</h1>
     </div>
     <div id="accordianId" role="tablist" aria-multiselectable="true">
-      <div class="card">
-        <div class="card-header" role="tab" id="section1HeaderId">
+      <div class="card" *ngFor="let service of services">
+        <div class="card-header" role="tab" [id]="service.id">
+          <img src="assets/images/award-icon.png" alt="">
           <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#section1ContentId" aria-expanded="true"
-              aria-controls="section1ContentId">
-              Secured Wheels
+            <a data-toggle="collapse" data-parent="#accordianId" [href]="service.descIdHref" aria-expanded="true"
+              [attr.aria-controls]="service.descId">
+              {{service.name}}
             </a>
           </h5>
         </div>
-        <div id="section1ContentId" class="collapse in" role="tabpanel" aria-labelledby="section1HeaderId">
+        <div [id]="service.descId" class="collapse in" role="tabpanel" [attr.aria-labelledby]="service.id">
           <div class="card-body">
-            Understand that mobility is essential and so we have earned yourself a reputation locally as a reliable car
-            rental company as we give you an unbeatable value throughout your rental.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section2HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#section2ContentId" aria-expanded="true"
-              aria-controls="section2ContentId">
-              School Bus and Staff Bus Scheme
-            </a>
-          </h5>
-        </div>
-        <div id="section2ContentId" class="collapse in" role="tabpanel" aria-labelledby="section2HeaderId">
-          <div class="card-body">
-            We can help you move your staff and students from home to work/school.
-            Our professional chauffeurs are continuously trained to make your trip a memorable one.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section3HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#amored" aria-expanded="true"
-              aria-controls="amored">
-              Armored Vehicles
-            </a>
-          </h5>
-        </div>
-        <div id="amored" class="collapse in" role="tabpanel" aria-labelledby="amored">
-          <div class="card-body">
-            If you’re moving your High value assets or individuals and security is of utmost importance, we have
-            vehicles suited for this purpose.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section4HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#premium" aria-expanded="true"
-              aria-controls="premium">
-              Premium Vehicles
-            </a>
-          </h5>
-        </div>
-        <div id="premium" class="collapse in" role="tabpanel" aria-labelledby="premium">
-          <div class="card-body">
-            Luxury and high value vehicles.
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab" id="section5HeaderId">
-          <h5 class="mb-0">
-            <a data-toggle="collapse" data-parent="#accordianId" href="#airport" aria-expanded="true"
-              aria-controls="airport">
-              Airport Pick up and Drop Off
-            </a>
-          </h5>
-        </div>
-        <div id="airport" class="collapse in" role="tabpanel" aria-labelledby="airport">
-          <div class="card-body">
-            We will arrange your pick up and drop off from the airport, in time.
+            {{service.desc}}
           </div>
         </div>
       </div>
     </div>
   </div>
 
+</div>
+
+<div class="vector" data-aos="zoom-in-down" data-aos-duration="2000">
+  <a href="assets/images/d-clean/3.jpg">
+    <img src="assets/images/d-clean/3-min.jpg" alt="Cleaning vector" id="vector">
+  </a>
 </div>
 
 <app-footer></app-footer>

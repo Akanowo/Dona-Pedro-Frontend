@@ -28,14 +28,15 @@
   <div class="row">
     <div class="col-md-6">
       <h1 (click)="setMissionDisplay()">Mission</h1>
-      <p [hidden] = "missionDisplay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatum vel aspernatur. Rerum id
-        molestias repellendus vero laudantium, ratione dicta qui repellat provident voluptas. Distinctio, nemo nobis!
-        Distinctio, cum quae.</p>
+      <ul [hidden]="missionDisplay">
+        <li>To help our clients concentrate on their core business while we handle all their mobility issues</li>
+        <li>To help customers get value for money spent through proper and efficient vehicle utilization.</li>
+        <li>To help our clients reduce cost.</li>
+      </ul>
     </div>
     <div class="col-md-6">
       <h1 (click)="setVisionDisplay()">Vision</h1>
-      <p [hidden] = "visionDisplay">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est molestias, quidem neque tenetur quod architecto
-        atque laboriosam labore perspiciatis eius inventore autem, at a dolorum, nam doloremque fuga quas nulla.</p>
+      <p [hidden]="visionDisplay">To continue to make positive changes in the business of logistics in Nigeria.</p>
     </div>
   </div>
 </div>
@@ -44,15 +45,12 @@
   <div class="row">
     <div class="col-md-6">
       <div id="dona-pedro-content">
-        <span>Our agencies</span>
-        <h2>Dona Pedro Agencies</h2>
+        <h2>Customer Satisfaction</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum maxime vel consectetur ratione iure minima
-          eligendi, distinctio autem, nemo aliquid doloremque, veritatis consequuntur suscipit cumque labore vitae
-          itaque
-          eos!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos molestias, velit odio facilis blanditiis
-          magni eos ipsam est aliquam quia modi quaerat voluptatum, recusandae eum quos? Sint hic corporis consequatur!
+          That is why we believe in extremely honest communication.
+          We want to make sure we understand your expectations and then deliver quality results. One quick call can free
+          up a bunch of time on your future schedule with any of our services.
+          We strive to make this as stress-free of a process as possible to ensure your satisfaction.
         </p>
       </div>
     </div>
@@ -72,7 +70,7 @@
           <h5 class="mb-0">
             <a data-toggle="collapse" data-parent="#accordianId" [href]="service.descIdHref" aria-expanded="true"
               [attr.aria-controls]="service.descId">
-              {{service.name}} 
+              {{service.name}}
             </a>
           </h5>
         </div>

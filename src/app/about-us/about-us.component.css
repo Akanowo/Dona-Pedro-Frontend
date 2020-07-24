@@ -96,11 +96,19 @@ h1 {
   cursor: pointer;
 }
 
-#mission-vision p {
+#mission-vision p, #mission-vision ul li {
   color: #d3d3d3;
   font-size: 17px;
 }
 
+#mission-vision ul {
+  margin: 0;
+  padding: 0;
+}
+
+#mission-vision ul li {
+  font-family: 'Poppins', sans-serif;
+}
 
 /* Dona pedro agencies section */
 

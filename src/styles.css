@@ -12365,6 +12365,9 @@ figure figcaption {
   bottom: 2px;
   right: 0px;
   text-align: center;
-  background: rgba(255,255,255,1);
   border-radius: 5px 0px 0px 5px;
   }
+
+#whatsHelp img {
+  border-radius: 50%;
+}

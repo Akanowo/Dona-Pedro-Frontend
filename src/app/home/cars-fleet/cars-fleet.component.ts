@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { ICar } from './cars';
 import { CarService } from './cars.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cars-fleet',
@@ -12,10 +13,14 @@ import { CarService } from './cars.service';
 })
 export class CarsFleetComponent implements OnInit {
   cars: ICar[];
-  constructor(private carService: CarService) {}
+  constructor(private carService: CarService, private router: Router) {}
 
   getCars() {
     this.cars = this.carService.getCars();
+  }
+
+  navigateDetails(id) {
+    this.router.navigate(['/cars', id]);
   }
 
 

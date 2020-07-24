@@ -41,7 +41,7 @@
             </div>
 
             <div class="but-data">
-              <button class="btn form-control" id="see-more" [routerLink]="['/cars', car.id]">
+              <button class="btn form-control" id="see-more" (click)="navigateDetails(car.id)">
                 <p> SEE MORE </p>
               </button>
             </div>

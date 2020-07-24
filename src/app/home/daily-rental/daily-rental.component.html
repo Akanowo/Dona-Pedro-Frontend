@@ -12,18 +12,18 @@
       <div class="modal-body">
         <div class="form-group" [ngClass]="{'error': !validateName()}">
           <label for="date">Name</label>
-          <em *ngIf="!validateName()">*Required</em>
           <input type="text" placeholder="Full Name" formControlName="name" class="form-control">
+          <em *ngIf="!validateName()">*Required</em>
         </div>
         <div class="form-group" [ngClass]="{'error': !validateEmail()}">
           <label for="date">Email</label>
-          <em *ngIf="!validateEmail()">*Required</em>
           <input type="email" placeholder="example@something.com" formControlName="email" class="form-control">
+          <em *ngIf="!validateEmail()">*Required</em>
         </div>
         <div class="form-group" [ngClass]="{'error': !validatePhone()}">
           <label for="date">Phone</label>
-          <em *ngIf="!validatePhone()">*Required</em>
           <input type="tel" placeholder="eg: 070xxxxxxx" formControlName="phone" class="form-control">
+          <em *ngIf="!validatePhone()">*Required</em>
         </div>
       </div>
       <div class="modal-footer">
@@ -34,53 +34,52 @@
 </div>
   <div class="form-group" [ngClass]="{'error': !validateDeparture()}">
     <label for="departure">Depature</label>
-    <em *ngIf="!validateDeparture()">*Required</em>
     <select class="form-control" formControlName="departure">
       <option value="Select Location" selected>Select Location</option>
       <option *ngFor="let depature of departures">
         {{depature}}
       </option>
     </select>
+    <em *ngIf="!validateDeparture()">*Required</em>
   </div>
   <div class="form-group" [ngClass]="{'error': !validateDestination()}">
     <label for="departure">Destination</label>
-    <em *ngIf="!validateDestination()">*Required</em>
     <select class="form-control" formControlName="destination">
       <option value="Select Location" selected>Select Location</option>
       <option *ngFor="let destination of destinations">
         {{destination}}
       </option>
     </select>
+    <em *ngIf="!validateDestination()">*Required</em>
   </div>
-  <div class="d-flex">
+  <div id="flex">
     <div class="form-group" [ngClass]="{'error': !validateDropOffDate()}">
       <label for="date">Dropoff Date</label>
-      <em *ngIf="!validateDropOffDate()">*Required</em>
       <input type="date" placeholder="Date" formControlName="dropoffDate" class="form-control">
+      <em *ngIf="!validateDropOffDate()">*Required</em>
     </div>
-    <div class="form-group" [ngClass]="{'error': !validateDropOffTime()}">
+    <div class="form-group" [ngClass]="{'error': !validateDropOffTime()}" [ngClass]="{'ml-4': setMargin}">
       <label for="time">Dropoff Time</label>
-      <em *ngIf="!validateDropOffTime()">*Required</em>
       <input type="time" class="form-control" formControlName="dropoffTime" placeholder="Time">
+      <em *ngIf="!validateDropOffTime()">*Required</em>
     </div>
   </div>
 
-  <div class="d-flex">
+  <div id="flex">
     <div class="form-group" [ngClass]="{'error': !validateReturnDate()}">
       <label for="date">Return Date</label>
-      <em *ngIf="!validateReturnDate()">*Required</em>
       <input type="date" placeholder="Date" formControlName="returnDate" class="form-control">
+      <em *ngIf="!validateReturnDate()">*Required</em>
     </div>
-    <div class="form-group" [ngClass]="{'error': !validateReturnTime()}">
-      <label for="time">Dropoff Time</label>
-      <em *ngIf="!validateReturnTime()">*Required</em>
+    <div class="form-group" [ngClass]="{'error': !validateReturnTime()}" [ngClass]="{'ml-4': setMargin}">
+      <label for="time">Return Time</label>
       <input type="time" class="form-control" formControlName="returnTime" placeholder="Time">
+      <em *ngIf="!validateReturnTime()">*Required</em>
     </div>
   </div>
 
   <div class="form-group" [ngClass]="{'error': !validateCarCategory()}">
     <label for="carList">Car Category</label>
-    <em *ngIf="!validateCarCategory()">*Required</em>
     <select class="form-control" formControlName="carCategory"
       (change)="getCategoryCars(dailyRentalForm.value.carCategory)">
       <option value="Select Category" selected>Select Category</option>
@@ -88,10 +87,10 @@
         {{category}}
       </option>
     </select>
+    <em *ngIf="!validateCarCategory()">*Required</em>
   </div>
   <div class="form-group" [ngClass]="{'error': !validateDepartureCar()}">
     <label for="carList">Car</label>
-    <em *ngIf="!validateDepartureCar()">*Required</em>
     <select class="form-control" formControlName="departureCar" name="car"
     (change)="getModel(dailyRentalForm.value.departureCar)">
       <option value="Select a car" selected>Select Car</option>
@@ -99,6 +98,7 @@
         {{car.car}}
       </option>
     </select>
+    <em *ngIf="!validateDepartureCar()">*Required</em>
   </div>
 
   <div class="form-group" [hidden] = "isDisabled" [ngClass]="{'error': !validateModel()}">

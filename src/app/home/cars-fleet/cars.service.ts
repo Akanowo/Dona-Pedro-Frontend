@@ -9,17 +9,19 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2010
+  model: 2010,
+  price: 18000
 },
 {
   id: 2,
-  name: 'Dodge Charger',
+  name: 'Dodge Changer',
   imgUrl: 'assets/images/extracted/2012_dodge_charger_angularfront.png',
   condition: 'In perfect working condition',
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2012
+  model: 2012,
+  price: 35000
 },
 {
   id: 3,
@@ -29,7 +31,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
+  price: 35000
 },
 {
   id: 4,
@@ -39,27 +42,30 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
+  price: 35000
 },
 {
   id: 5,
-  name: 'Honda Accord Coupe',
+  name: 'Honda Accord',
   imgUrl: 'assets/images/extracted/2014_honda_accord_coupe_angularfront.png',
   condition: 'In perfect working condition',
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
+  price: 30000
 },
 {
   id: 6,
-  name: 'Lexus ES',
+  name: 'Lexus ES 350',
   imgUrl: 'assets/images/extracted/2014_lexus_es_angularfront.png',
   condition: 'In perfect working condition',
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
+  price: 35000
 },
 {
   id: 7,
@@ -89,7 +95,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
+  price: 65000
 },
 {
   id: 10,
@@ -99,7 +106,7 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2014
+  model: 2014,
 },
 {
   id: 11,
@@ -119,7 +126,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2016
+  model: 2016,
+  price: 20000
 },
 {
   id: 13,
@@ -129,7 +137,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2018
+  model: 2018,
+  price: 45000
 },
 {
   id: 14,
@@ -139,7 +148,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2018
+  model: 2018,
+  price: 22000
 },
 {
   id: 15,
@@ -149,7 +159,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2018
+  model: 2018,
+  price: 22000
 },
 {
   id: 16,
@@ -159,7 +170,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2012
+  model: 2012,
+  price: 25000
 },
 {
   id: 17,
@@ -169,7 +181,8 @@ const cars: ICar[] = [{
   transition: 'Automatic',
   bodyType: 'Sports',
   capacity: '2 seats',
-  model: 2015
+  model: 2014,
+  price: 30000
 },
 ];
 

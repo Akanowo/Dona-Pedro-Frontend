@@ -8,7 +8,7 @@ const events: IEvent[] = [{
     desc: `This event is going to be a family event that will feature delicious food
   fromover 10 Grill, BBQ and Mixologist joints across Port Harcourt from
   top Restaurants, lounges and hotels in the city.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/bbq.png'
   },
 
   {
@@ -22,7 +22,7 @@ const events: IEvent[] = [{
    items many different cuisines such as sushi, chicken parmigiana and Ruben sandwiches.
   In our event a lot of card games with water games will be provided with a lot dressed like sea creatures so
   imagine hundreds of gorgeous looking mermaids frolicking in the pool with their multi-color tails, wow that's romantic.`,
-    imgUrl: 'assets/images/promotions/pool-parties.jpg'
+    imgUrl: 'assets/images/promotions/pool.jpg'
   },
 
   {
@@ -31,20 +31,20 @@ const events: IEvent[] = [{
     Every last Friday's with a different party themes like masked party, all white party.
     Its going to be a bevy of fun with beautiful people. You differently need a linkup with
      bad bitches or a cool cat. A club party with the best DJs and the right people makes your night lit. `,
-    imgUrl: 'assets/images/promotions/club-party.jpg'
+    imgUrl: 'assets/images/promotions/club.jpg'
   },
 
   {
     name: 'Cultural & Arts Festivals',
     desc: ` Once every year we drop it like its hot, show  casing our different rich cultural heritage with beautiful arts. `,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/art.jpg'
   },
 
   {
     name: 'Brand Activation',
     desc: `We help brands with their activations once a month especially
      for the liquor companies. If you love to party hard watch this space for more events and venues.`,
-    imgUrl: 'assets/images/promotions/brand.jpf'
+    imgUrl: 'assets/images/promotions/brand.jpg'
   },
 
   {
@@ -52,7 +52,7 @@ const events: IEvent[] = [{
     desc: `Once a year we give you a music concert like a festival just like the coachella,
     it's going to be epic, golden sounds from both old and new, with lovely show performances
     to make the occasion unforgettable. You might likely have to get you tent because it will be for the weekend.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/music2.jpg'
   },
 
   {
@@ -62,14 +62,14 @@ const events: IEvent[] = [{
     Exhibit sponsors receive long-term recognition and exposure for the duration of the
     show and the exclusive opportunity to host a private reception in the intimate gallery
     space-how about an employee happy hour or a customer thank-you event?`,
-    imgUrl: 'assets/images/promotions/street-gallery.jpg'
+    imgUrl: 'assets/images/promotions/street.jpg'
   },
 
   {
     name: 'Fashion Show',
     desc: `Once a year for young designers to bring to live their fashion sense to the runaway
     in order for it to be appreciated and accepted by the public.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/fashion.jpg'
   },
 
   {
@@ -80,7 +80,7 @@ const events: IEvent[] = [{
     At our event a lot of card games with water games will be provided and the selected pretty females
     better will be dressed like mermaids, so imagine hundreds of gorgeous looking mermaids
      frolicking in the pool beach with their multi-color tails, wow that's romantic.`,
-    imgUrl: 'assets/images/promotions/beach-party.jpg'
+    imgUrl: 'assets/images/promotions/beachParty.jpg'
   },
 
   {
@@ -88,7 +88,7 @@ const events: IEvent[] = [{
     desc: `Strictly branded for Harp as a way to recognise achievers in the industry,
     they are worth celebrating and recognition, for their pains, hardworking, sacrifice and innovations
     to the industry. An award like no other.`,
-    imgUrl: 'assets/images/dummy/three-woman-with-face-paintings.jpg'
+    imgUrl: 'assets/images/promotions/harp.jpg'
   },
 ];
 

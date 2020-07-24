@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CarReserveService } from '../car-reserve/car-reserve-api.service';
 import { IReserve } from '../car-reserve/car-reserve-api.model';
 import { ICarReserve } from '../car-reserve//cars.model';
@@ -11,7 +11,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './daily-rental.component.html',
   styleUrls: ['./daily-rental.component.css']
 })
-export class DailyRentalComponent implements OnInit {
+export class DailyRentalComponent implements OnInit, AfterViewInit {
+  body: HTMLDocument;
+  setMargin: boolean;
   dailyRentalForm: FormGroup;
   private departure: FormControl;
   private destination: FormControl;
@@ -214,6 +216,14 @@ export class DailyRentalComponent implements OnInit {
       name: this.name,
       phone: this.phone
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (this.body.body.clientWidth <= 320) {
+      this.setMargin = true;
+    } else {
+      this.setMargin = false;
+    }
   }
 
 }

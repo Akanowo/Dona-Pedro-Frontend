@@ -7,4 +7,5 @@ export interface ICar {
   bodyType: string;
   capacity: string;
   model: number;
+  price?: number;
 }

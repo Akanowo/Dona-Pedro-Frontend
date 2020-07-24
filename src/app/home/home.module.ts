@@ -18,6 +18,8 @@ import { DailyRentalComponent } from './daily-rental/daily-rental.component';
 import { FooterModule } from '../footer/footer.module';
 import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { CarDetailComponent } from './cars-fleet/car-detail/car-detail.component';
+import { SliderComponent } from './slider/slider.component';
+import { ClientsComponent } from './clients/clients.component';
 
 
 const homeRoutes: Routes  = [];
@@ -46,6 +48,8 @@ const homeRoutes: Routes  = [];
     DailyRentalComponent,
     HomeBannerComponent,
     CarDetailComponent,
+    SliderComponent,
+    ClientsComponent,
   ],
   exports: [ NavbarComponent, BackgroundBannerComponent ]
 })

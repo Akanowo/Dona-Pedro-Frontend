@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <app-background-banner [heading] = "car.name"></app-background-banner>
 
-<div class="container" *ngIf="car" id="carDescription">
+<div class="container" *ngIf="car" id="carDescription" data-aos="zoom-in-up" data-aos-duration="2000">
   <div class="carImage">
     <img [src]="car.imgUrl" alt="">
   </div>
@@ -12,7 +12,8 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Inventore minus distinctio cumque ex sint voluptatem sunt magnam sed id earum fuga dolorum culpa sit, 
         maiores ut expedita. Delectus, deleniti quidem.</p>
-        <span id="price" type="button">$500/day</span>
+        <span *ngIf="car.price" id="price" type="button">{{car.price | currency:"NGN":"symbol"}}/day</span>
+        <span *ngIf="!car.price" id="price" type="button">Price available on request</span>
     </div>
   
     <div class="col-md-6 pl-5">
