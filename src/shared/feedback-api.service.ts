@@ -19,8 +19,6 @@ export class FeedBackService {
       })
     };
 
-    console.log(endpoint);
-
     return this.http.post(endpoint, formValues, options);
   }
 }

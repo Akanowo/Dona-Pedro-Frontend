@@ -30,14 +30,6 @@ export class PromotionsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.cardBody.nativeElement.onmouseover = () => {
-      this.btn.nativeElement.style.backgroundColor = '#FFBE4D';
-      this.btn.nativeElement.style.color = '#000';
-    };
-    this.cardBody.nativeElement.onmouseleave = () => {
-      this.btn.nativeElement.style.backgroundColor = '#010311';
-      this.btn.nativeElement.style.color = '#fff';
-    };
   }
 
 }

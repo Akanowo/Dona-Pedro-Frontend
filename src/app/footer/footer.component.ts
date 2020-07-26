@@ -58,7 +58,6 @@ export class FooterComponent implements OnInit {
         });
       }
       this.spinner.hide('mail');
-      console.log('Response: ', response);
       const { data } = response;
       if (data.status === 'valid') {
         this.toastr.info('Email Address Valid!', 'Success', {
@@ -78,7 +77,6 @@ export class FooterComponent implements OnInit {
         return false;
       }
     }, (err) => {
-      console.log('An error occured ', err);
       this.spinner.hide('main');
       this.toastr.error('No Internet Connection', 'Failed', {
         positionClass: 'toast-bottom-left'
@@ -87,32 +85,27 @@ export class FooterComponent implements OnInit {
   }
 
   onSubmit(formValues) {
-    console.log(formValues);
     this.spinner.show('submit');
     try {
       this.feedback.sendFeedback(formValues).subscribe((response: IFeedback) => {
-        console.log('Response: ', response);
         if (response.error) {
           this.spinner.hide('submit');
           this.toastr.error(response.message, 'Error', {
             positionClass: 'toast-bottom-left'
           });
         } else {
-          console.log(response);
           this.spinner.hide('submit');
           this.toastr.success('Sucess!', response.message, {
             positionClass: 'toast-bottom-left'
           });
         }
       }, (err) => {
-        console.log(err);
         this.spinner.hide('sub');
         this.toastr.error(err.error.message, 'Error', {
           positionClass: 'toast-bottom-left'
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 

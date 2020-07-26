@@ -106,7 +106,6 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
   }
 
   getCategoryCars(category: string) {
-    console.log(category);
     if (category === 'Select Category') {
       this.cars = [];
       this.isDisabled = true;
@@ -115,7 +114,6 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
     try {
       this.reservation.getCategoryCars(category).subscribe((response: ICarReserve) => {
         this.spinner.hide('sub');
-        console.log(response);
         this.cars = response.cars;
       }, (err) => {
         this.spinner.hide('sub');
@@ -124,7 +122,6 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 
@@ -132,7 +129,6 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
     this.spinner.show('sub');
     try {
       this.reservation.getCategories().subscribe((response: IReserve) => {
-        console.log(response);
         this.spinner.hide('sub');
         this.categories = response.categories;
         this.departures = response.locations;
@@ -144,7 +140,6 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 
@@ -159,12 +154,9 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit(formValues) {
-    console.log(formValues);
     this.spinner.show('main');
     try {
       this.reservation.makeReservation(formValues).subscribe((response: IReserveResponse) => {
-        console.log(response);
-        console.log(response.error);
         if (response.error) {
           this.spinner.hide('main');
           this.toastr.error('Check your internet and try again', 'Error', {
@@ -177,14 +169,12 @@ export class DailyRentalComponent implements OnInit, AfterViewInit {
           });
         }
       }, (err) => {
-        console.log(err);
         this.spinner.hide('main');
         this.toastr.error('Error connecting', 'Error', {
           positionClass: 'toast-bottom-left'
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
     }
   }
 

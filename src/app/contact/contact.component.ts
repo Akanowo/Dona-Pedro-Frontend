@@ -28,7 +28,6 @@ export class ContactComponent implements OnInit {
         });
       }
       this.spinner.hide('main');
-      console.log('Response: ', response);
       const { data } = response;
       if (data.status === 'valid') {
         this.toastr.info('Email Address Valid!', 'Success', {
@@ -48,7 +47,6 @@ export class ContactComponent implements OnInit {
         return false;
       }
     }, (err) => {
-      console.log('An error occured ', err);
       this.spinner.hide('main');
       this.contactForm.controls.name.disable();
       this.contactForm.controls.phone.disable();
@@ -61,7 +59,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit(formValues) {
     formValues.type = 'contact';
-    console.log(formValues);
     this.spinner.show('sub');
     try {
       this.feedback.sendFeedback(formValues).subscribe((response: IFeedback) => {
