@@ -71,7 +71,7 @@
     left: 37%;
   }
 
-  #icons i {
+  #icons mdb-icon {
     display: inline;
     margin: 10px;
     cursor: pointer;
