@@ -7,12 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatWeOfferComponent implements OnInit {
 
-  iterator: Array<any> = [
-    {img: 'assets/images/ads/ads2.jpg'},
-    {img: 'assets/images/ads/ads1.jpeg'},
-    {img: 'assets/images/ads/ads5.jpeg'}
-  ];
-
   services = [
   {
     id: 'a1',

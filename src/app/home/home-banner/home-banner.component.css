@@ -41,8 +41,48 @@
   color: #000;
 }
 
+#icons {
+  color: #FFBE4D;
+  margin: 10px;
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  font-size: 21px;
+  z-index: 99999;
+}
+
+#icons mdb-icon {
+  display: block;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+#icons a {
+  color: #FFBE4D;
+}
+
 
 /* Media Queries */
+
+@media (max-width: 500px) {
+  #icons {
+    top: 90%;
+    left: 37%;
+  }
+
+  #icons i {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 390px) {
+  #icons {
+    left: 33%;
+  }
+}
 
 @media (max-width: 375px) {
   .background-cover {
@@ -51,6 +91,10 @@
 }
 
 @media (max-width: 310px) {
+  #icons {
+    left: 28%;
+  }
+
   .background-text {
     top: 35%;
   }

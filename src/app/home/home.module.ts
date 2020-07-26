@@ -20,6 +20,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { CarDetailComponent } from './cars-fleet/car-detail/car-detail.component';
 import { SliderComponent } from './slider/slider.component';
 import { ClientsComponent } from './clients/clients.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 const homeRoutes: Routes  = [];
@@ -33,7 +34,8 @@ const homeRoutes: Routes  = [];
     NgxSpinnerModule,
     HttpClientModule,
     FooterModule,
-    RouterModule.forChild(homeRoutes)
+    RouterModule.forChild(homeRoutes),
+    MDBBootstrapModule.forRoot()
   ],
   declarations: [
     HomeComponent,

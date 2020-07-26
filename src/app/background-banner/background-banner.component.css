@@ -31,7 +31,7 @@
   z-index: 99999;
 }
 
-#icons i {
+#icons mdb-icon {
   display: block;
   margin-bottom: 25px;
   cursor: pointer;

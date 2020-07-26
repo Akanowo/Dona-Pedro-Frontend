@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { EventsService } from 'src/shared/events.service';
 import { SlicePipe, CurrencyPipe } from '@angular/common';
 import { CarService } from './home/cars-fleet/cars.service';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 const appRoutes: Routes = [];
@@ -44,8 +45,9 @@ const appRoutes: Routes = [];
     FooterModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
+    MDBBootstrapModule.forRoot()
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [ CarReserveService, FeedBackService, EmailVerificationService, EventsService, SlicePipe, CarService, CurrencyPipe ],
   bootstrap: [AppComponent],
    exports: [ NavbarComponent, ReactiveFormsModule, BackgroundBannerComponent ]
