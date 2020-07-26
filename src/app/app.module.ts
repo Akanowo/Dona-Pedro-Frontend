@@ -9,7 +9,6 @@ import { CarReserveService } from './home/car-reserve/car-reserve-api.service';
 import { RouterModule, Routes } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { AboutBannerComponent } from './about-us/about-banner/about-banner.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BackgroundBannerComponent } from './background-banner/background-banner.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,7 +29,6 @@ const appRoutes: Routes = [];
   declarations: [
     AppComponent,
     AboutUsComponent,
-    AboutBannerComponent,
     DCleanComponent,
     ContactComponent,
     PromotionsComponent

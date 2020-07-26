@@ -28,12 +28,17 @@
   top: 35%;
   right: 5%;
   font-size: 21px;
+  z-index: 99999;
 }
 
 #icons i {
   display: block;
   margin-bottom: 25px;
   cursor: pointer;
+}
+
+#icons a {
+  color: #FFBE4D;
 }
 
 .background-text p {

@@ -7,36 +7,41 @@
           is a family-owned business that was registered on 31 August 2012 by Ukandu Pedro Onyemeachi. 
           We deliver world-standard services in different areas across the board. From car rentals to deep cleaning and lifestyle entertainment.
         </p>
-        <div class="logo">
-          <img src="assets/images/dona-logo.png" alt="Dona Pedro Logo">
-        </div>
+      </div><br>
+      <div class="footer-text">
+        <h2><span>Contact</span> Us</h2>
+        <p>60,Ijaiye Road Ogba, Lagos State.</p>
+        <p>08162139745, 07062892010</p>
+        <p>contact@donapedroagencies.com</p>
+      </div><br><br>
+      <div class="logo">
+        <img src="assets/images/dona-logo.png" alt="Dona Pedro Logo">
       </div>
     </div>
     <div class="col-md-6" data-aos="flip-left" data-aos-duration="3000">
       <form [formGroup]="footerForm" (ngSubmit)="onSubmit(footerForm.value)" novalidate>
-        <h3 class="mb-5">Leave us a Message</h3>
-        <div class="form-group">
-          <input type="text" name="name" formControlName="name" class="form-control" placeholder="Name:">
+        <h3 class="mb-5">Give us a Feedback</h3>
+        <div class="form-group" [ngClass]="{'error': !validateName()}">
+          <input type="text" name="name" formControlName="name" class="form-control" placeholder="Name:" autocomplete="off">
+          <em *ngIf="!validateName()">Required*</em>
         </div>
-        <div class="form-group">
-          <input type="text" name="email" formControlName="email" class="form-control" placeholder="Email:">
+        <div class="form-group" [ngClass]="{'error': !validateEmail()}">
+          <input type="email" formControlName="email" class="form-control" placeholder="Email:" autocomplete="off"
+          (change)="emailVerify(footerForm.value.email)">
+          <em *ngIf="!validateEmail()">Required*</em>
         </div>
-        <div class="form-group">
-          <input type="tel" name="phone" formControlName="phone" class="form-control" placeholder="Phone:">
+        <div class="form-group" [ngClass]="{'error': !validatePhone()}">
+          <input type="tel" name="phone" formControlName="phone" class="form-control" placeholder="Phone:" autocomplete="off">
+          <em *ngIf="!validatePhone()">Required*</em>
         </div>
-        <div class="form-group">
-          <input type="text" name="message" formControlName="message" class="form-control" placeholder="Message:">
+        <div class="form-group" [ngClass]="{'error': !validateMessage()}">
+          <input type="text" name="message" formControlName="message" class="form-control" placeholder="Message:" autocomplete="off">
+          <em *ngIf="!validateMessage()">Required*</em>
         </div>
-        <button class="btn form-control">Send</button>
+        <button class="btn form-control" [disabled]="footerForm.invalid">Send</button>
       </form>
     </div>
   </div>
-    
-    <a target="_blank" id="whatsHelp" href="https://wa.me/2348162139745?text=Good Day,">
-    
-    <img src="assets/images/whatsapp.png" style="height: 50px;">
-    
-    </a>
 
   <div class="row mt-5" id="footer-icons">
     <div class="col-md-12 text-center">
@@ -47,4 +52,9 @@
 </div>
 
 
-<ngx-spinner name = "sub" type = "ball-scale-ripple-multiple"></ngx-spinner>
+<ngx-spinner name = "submit" type = "ball-scale-ripple-multiple">
+  <!-- <p>Sending Feedback</p> -->
+</ngx-spinner>
+<ngx-spinner name = "mail" type = "ball-scale-ripple-multiple">
+  <p>Verifying Email</p>
+</ngx-spinner>

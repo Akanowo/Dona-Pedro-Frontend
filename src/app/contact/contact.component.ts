@@ -50,6 +50,9 @@ export class ContactComponent implements OnInit {
     }, (err) => {
       console.log('An error occured ', err);
       this.spinner.hide('main');
+      this.contactForm.controls.name.disable();
+      this.contactForm.controls.phone.disable();
+      this.contactForm.controls.message.disable();
       this.toastr.error('No Internet Connection', 'Failed', {
         positionClass: 'toast-bottom-left'
       });
@@ -57,31 +60,32 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(formValues) {
+    formValues.type = 'contact';
+    console.log(formValues);
     this.spinner.show('sub');
     try {
       this.feedback.sendFeedback(formValues).subscribe((response: IFeedback) => {
-        console.log('Response: ', response);
         if (response.error) {
           this.spinner.hide('sub');
           this.toastr.error(response.message, 'Error', {
             positionClass: 'toast-bottom-left'
           });
         } else {
-          console.log(response);
           this.spinner.hide('sub');
-          this.toastr.success('Sucess!', 'Car successfully reserved!', {
+          this.toastr.success(response.message, 'Success', {
             positionClass: 'toast-bottom-left'
           });
         }
       }, (err) => {
-        console.log(err);
         this.spinner.hide('sub');
-        this.toastr.error(err.error.message, 'Error', {
+        this.toastr.error(err.message, 'Error', {
           positionClass: 'toast-bottom-left'
         });
       });
     } catch (err) {
-      console.log('An error occured', err);
+      this.toastr.error('An error occured', 'Error', {
+        positionClass: 'toast-bottom-left'
+      });
     }
   }
 

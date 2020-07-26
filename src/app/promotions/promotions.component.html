@@ -28,7 +28,7 @@
   <h1>Entertainment and Lifestyle</h1>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let event of events" id="cards" data-aos="zoom-in-right" data-aos-duration="3000">
+      <div class="col-lg-3 col-md-6 col-sm-12" #cardBody *ngFor="let event of events" id="cards" data-aos="zoom-in-right" data-aos-duration="3000">
         <div class="card">
           <div class="card-header">
             <img [src]="event.imgUrl">
@@ -38,7 +38,7 @@
             <p>{{event.desc | slice:0:150}}...</p>
             <button type="button" class="btn form-control" 
           (click)="setDetails(event.name, event.desc, event.imgUrl)"
-          data-toggle="modal" data-target="#modelId">Show More</button>
+          data-toggle="modal" data-target="#modelId" #showMoreBtn>Show More</button>
         </div>
           </div>
       </div>

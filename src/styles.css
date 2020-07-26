@@ -12371,3 +12371,8 @@ figure figcaption {
 #whatsHelp img {
   border-radius: 50%;
 }
+
+ngx-spinner p {
+  color: #fff;
+  margin-top: 1em;
+}

@@ -9,28 +9,21 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="text-uppercase">{{car.name}} {{car.model}}</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Inventore minus distinctio cumque ex sint voluptatem sunt magnam sed id earum fuga dolorum culpa sit, 
-        maiores ut expedita. Delectus, deleniti quidem.</p>
         <span *ngIf="car.price" id="price" type="button">{{car.price | currency:"NGN":"symbol"}}/day</span>
         <span *ngIf="!car.price" id="price" type="button">Price available on request</span>
     </div>
   
-    <div class="col-md-6 pl-5">
+    <div class="col-md-6" id="car-condition">
       <h2 class="text-uppercase">Condition of car</h2>
         <p>{{car.condition}}</p>
-        <p>Used twice since release</p>
-        <p>Brake in shape</p>
-        <p>Headlight is sharp</p>
+        <p>Automatic</p>
     </div>
   </div>
 
   <div id="reserveContainer">
     <div class="text-center">
       <h1>Reserve Now!</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vero a cupiditate voluptas reprehenderit
-        dolor,
-        atque aliquam! Magni, optio cum.</p>
+      <p>Interested in {{car.name}}? </p>
         <button type="button" class="btn form-control text-black" id="reserveBtn" [routerLink]="['/home/transfer']" >Click to reserve</button>
     </div>
   </div>

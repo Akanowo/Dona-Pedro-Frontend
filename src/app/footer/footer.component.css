@@ -45,6 +45,9 @@ form input, select {
   background: none;
   padding: 0;
   border-radius: 0;
+}
+
+form .form-group {
   margin-bottom: 3em;
 }
 
@@ -79,6 +82,33 @@ i {
 .logo img {
   height: 15%;
   width: 15%;
+}
+
+/* Form error styles */
+em {
+  color: #da2020;
+  float: right;
+}
+
+.error input {
+  border-color: #ff0000;
+}
+
+.error ::-webkit-input-placeholder {
+  color: #999;
+}
+
+.error ::-moz-placeholder {
+  color: #999
+}
+
+.error :-moz-placeholder {
+  color: #999;
+}
+
+/* Spinner style */
+ngx-spinner p {
+  color: #fff;
 }
 
 

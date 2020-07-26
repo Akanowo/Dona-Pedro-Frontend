@@ -29,14 +29,37 @@
       </div>
     </div>
     <div class="col-md-6" id="carReserve-img-block">
-      <img src="assets/images/bmw-22478.png" alt="">
-      <div class="text-center">
-        <span>Meet the</span>
-        <h2>BMW Rouge</h2>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/extracted/bentley_gtc.jpg" class="img-fluid mt-5" alt="">
+            <div class="text-center">
+              <span>Meet the</span>
+              <h2>Bentley GTC</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/extracted/rolls-royce-wraith.jpg" class="img-fluid mt-5" alt="">
+            <div class="text-center">
+              <span>Meet the</span>
+              <h2>Rolls Royce Wraith</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/extracted/ford_mustang.png" class="img-fluid mt-5" alt="">
+          <div class="text-center">
+            <span>Meet the</span>
+            <h2>Ford Mustang</h2>
+        </div>
+      </div>
       </div>
     </div>
   </div>
 </div>
 
-<ngx-spinner name = "main" type = "ball-clip-rotate"></ngx-spinner>
-<ngx-spinner name = "sub" type = "ball-scale-ripple-multiple"></ngx-spinner>
+<ngx-spinner name = "main" type = "ball-clip-rotate">
+  <p>Reserving..</p>
+</ngx-spinner>
+<ngx-spinner name = "sub" type = "ball-scale-ripple-multiple">
+  <p>Loading..</p>
+</ngx-spinner>

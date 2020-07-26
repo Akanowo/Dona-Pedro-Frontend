@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { CarService } from 'src/app/home/cars-fleet/cars.service';
+import { CarReserveService } from 'src/app/home/car-reserve/car-reserve-api.service';
 
 
 @Injectable()
 
 export class FeedBackService {
-  endpoint = environment.API_ENDPOINT;
-  proxUrl = 'https://cors-anywhere.herokuapp.com/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private carService: CarReserveService) {}
+
   sendFeedback(formValues: object) {
-    const endpoint = this.proxUrl + this.endpoint + '/api/feedback';
+    const endpoint = this.carService.getUrl() + '/feedback';
     const options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     };
+
+    console.log(endpoint);
 
     return this.http.post(endpoint, formValues, options);
   }
