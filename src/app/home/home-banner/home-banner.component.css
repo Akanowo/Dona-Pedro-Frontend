@@ -44,7 +44,6 @@
 #icons {
   color: #FFBE4D;
   margin: 10px;
-  position: absolute;
   top: 35%;
   right: 5%;
   font-size: 21px;
@@ -52,8 +51,8 @@
 }
 
 #icons mdb-icon {
-  display: block;
-  margin-bottom: 25px;
+  display: inline;
+  margin: 10px;
   cursor: pointer;
 }
 
