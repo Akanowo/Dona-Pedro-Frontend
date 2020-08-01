@@ -19,10 +19,12 @@
       <div class="reserve-container">
         <div class="d-flex text-center">
           <div class="col-md-4 col-sm-4">
-            <button routerLink="transfer" routerLinkActive="active"  type="button" class="btn">Transfer</button>
+            <button routerLink="transfer" routerLinkActive="active" [ngClass]="{'btnActive shadow-lg': isTransferActive}"
+            type="button" class="btn" (click)="toggleDailyActive()">Transfer</button>
           </div><br>
           <div class="col-md-4 col-sm-4">
-            <button type="button" routerLink="daily-rental" routerLinkActive="active"  class="btn">Daily Rental</button>
+            <button type="button" routerLink="daily-rental" routerLinkActive="active"
+              [ngClass]="{'btnActive shadow-lg': isDailyActive}" (click)="toggleTransferActive()" class="btn">Daily Rental</button>
           </div>
         </div><br>
         <router-outlet></router-outlet>
@@ -32,34 +34,48 @@
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/images/extracted/bentley_gtc.jpg" class="img-fluid mt-5" alt="">
+            <img src="assets/images/extracted/bentley_gtc.jpg" class="img-fluid mt-5" alt="Bentley GTC">
             <div class="text-center">
               <span>Meet the</span>
               <h2>Bentley GTC</h2>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/images/extracted/rolls-royce-wraith.jpg" class="img-fluid mt-5" alt="">
+            <img src="assets/images/extracted/rolls-royce-wraith.jpg" class="img-fluid mt-5" alt="Rolls Royce Wraith">
             <div class="text-center">
               <span>Meet the</span>
               <h2>Rolls Royce Wraith</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/extracted/ford_mustang.png" class="img-fluid mt-5" alt="Ford Mustang">
+            <div class="text-center">
+              <span>Meet the</span>
+              <h2>Ford Mustang</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/extracted/maserati.jpg" class="img-fluid mt-5" alt="">
+            <div class="text-center">
+              <span>Meet the</span>
+              <h2>Maserati Convertible</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/extracted/Rolls_Royce_Ghost.png" class="img-fluid mt-5" alt="">
+            <div class="text-center">
+              <span>Meet the</span>
+              <h2>Rolls Royce Ghost</h2>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="assets/images/extracted/ford_mustang.png" class="img-fluid mt-5" alt="">
-          <div class="text-center">
-            <span>Meet the</span>
-            <h2>Ford Mustang</h2>
-        </div>
-      </div>
       </div>
     </div>
   </div>
-</div>
 
-<ngx-spinner name = "main" type = "ball-clip-rotate">
-  <p>Reserving..</p>
-</ngx-spinner>
-<ngx-spinner name = "sub" type = "ball-scale-ripple-multiple">
-  <p>Loading..</p>
-</ngx-spinner>
+  <ngx-spinner name="main" type="ball-clip-rotate">
+    <p>Reserving..</p>
+  </ngx-spinner>
+  <ngx-spinner name="sub" type="ball-scale-ripple-multiple">
+    <p>Loading..</p>
+  </ngx-spinner>

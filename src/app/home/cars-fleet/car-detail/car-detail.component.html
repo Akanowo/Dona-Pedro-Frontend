@@ -1,21 +1,22 @@
 <app-navbar></app-navbar>
 <app-background-banner [heading] = "car.name"></app-background-banner>
 
-<div class="container" *ngIf="car" id="carDescription" data-aos="zoom-in-up" data-aos-duration="2000">
+<div class="container" *ngFor="let model of car.models" id="carDescription" data-aos="zoom-in-up" data-aos-duration="2000">
   <div class="carImage">
-    <img [src]="car.imgUrl" alt="">
+    <img [src]="model.imgUrl" [alt]="car.name + ' ' + model.year">
   </div>
 
   <div class="row">
     <div class="col-md-6">
-      <h2 class="text-uppercase">{{car.name}} {{car.model}}</h2>
-        <span *ngIf="car.price" id="price" type="button">{{car.price | currency:"NGN":"symbol"}}/day</span>
-        <span *ngIf="!car.price" id="price" type="button">Price available on request</span>
+      <h2 class="text-uppercase">{{car.name}} {{model.year}}</h2>
+        <span *ngIf="model.price" id="price" type="button">{{model.price | currency:"NGN":"symbol"}}/day</span>
+        <span *ngIf="!model.price" id="price" type="button">Price available on request</span>
     </div>
   
     <div class="col-md-6" id="car-condition">
       <h2 class="text-uppercase">Condition of car</h2>
         <p>{{car.condition}}</p>
+        <p>{{car.capacity}}</p>
         <p>Automatic</p>
     </div>
   </div>
@@ -23,7 +24,7 @@
   <div id="reserveContainer">
     <div class="text-center">
       <h1>Reserve Now!</h1>
-      <p>Interested in {{car.name}}? </p>
+      <p>Interested in {{car.name}} {{model.year}}?  </p>
         <button type="button" class="btn form-control text-black" id="reserveBtn" [routerLink]="['/home/transfer']" >Click to reserve</button>
     </div>
   </div>

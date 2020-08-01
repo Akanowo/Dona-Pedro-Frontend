@@ -1,9 +1,9 @@
 form input {
-  color: #949494;
+  color: #cccccc;
 }
 
 form input, select {
-  border: 1px solid #949494;
+  border: 1px solid #cccccc;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -26,7 +26,7 @@ form select:focus {
 }
 
 form input::placeholder, label {
-  color: #949494;
+  color: #cccccc;
 }
 
 .d-flex .form-group:nth-child(odd) {
@@ -38,7 +38,7 @@ form input::placeholder, label {
 }
 
 input[type="date"], input[type="time"] {
-  color: #949494;
+  color: #cccccc;
 }
 
 select option {

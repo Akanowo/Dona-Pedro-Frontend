@@ -8520,8 +8520,8 @@ button.bg-dark:focus {
 }
 
 .shadow-lg {
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  -webkit-box-shadow: 0 7rem 10rem rgba(0, 0, 0, 0.175) !important;
+  box-shadow: 0 7rem 10rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .shadow-none {

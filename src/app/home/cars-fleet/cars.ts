@@ -1,11 +1,16 @@
 export interface ICar {
-  id: number;
+  id: string;
   name: string;
   imgUrl: string;
   condition: string;
   transition: string;
   bodyType: string;
   capacity: string;
-  model: number;
-  price?: number;
+  models?: Array<
+    {
+      year?: number;
+      imgUrl?: string;
+      price?: number
+    }
+  >;
 }

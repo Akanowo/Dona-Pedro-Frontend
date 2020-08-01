@@ -47,6 +47,15 @@
   border-radius: 50%;
 }
 
+.btn {
+  box-shadow: 0 7rem 10rem rgba(240, 240, 240, 0.175) !important;
+}
+
+.btnActive {
+  color: #fff;
+  padding: 10px;
+}
+
 /* Media queries */
 
 @media (max-width: 1030px) {

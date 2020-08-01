@@ -16,8 +16,13 @@ export class CarDetailComponent implements OnInit, AfterViewInit {
     AOS.init();
   }
 
+  getCar() {
+    this.car = this.carService.cars.find((car) => car.id === this.router.snapshot.params.id);
+  }
+
   ngOnInit(): void {
-    this.car = this.carService.getCar(+this.router.snapshot.params.id);
+    this.getCar();
+    // this.car = this.carService.getCar();
     this.route.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;

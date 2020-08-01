@@ -154,7 +154,10 @@ export class TransferComponent implements OnInit, AfterViewInit {
           });
         } else {
           this.spinner.hide('main');
-          this.toastr.success('Sucess!', 'Car successfully reserved!', {
+          this.toastr.success('Car successfully reserved!', 'Success!', {
+            positionClass: 'toast-bottom-left'
+          });
+          this.toastr.info(`An invoice would be sent to ${formValues.email} `, 'Info', {
             positionClass: 'toast-bottom-left'
           });
         }
